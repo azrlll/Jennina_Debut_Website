@@ -577,11 +577,11 @@ body.invitation-open .curtain-right {
 
 .sash-title {
   font-family: var(--font-serif);
-  font-size: clamp(0.7rem, 1.6vw, 0.85rem);
+  font-size: clamp(0.74rem, 1.6vw, 0.88rem);
   letter-spacing: 0.28em;
-  font-weight: 700;
-  color: var(--royal-gold);
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+  font-weight: 800;
+  color: #FFFFFF;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(212, 175, 55, 0.8);
   text-align: center;
   padding: 4px 0;
 }
@@ -694,26 +694,31 @@ body.invitation-open .curtain-right {
 
 .teaser-intro {
   font-family: var(--font-serif);
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   letter-spacing: 0.2em;
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--gold-light);
-  opacity: 0.85;
+  color: #FFFDF5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  opacity: 1;
 }
 
 .teaser-celebrant {
   font-family: var(--font-script);
-  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-  color: var(--cream);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
 .teaser-age {
   font-family: var(--font-serif);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--royal-gold);
+  color: #FFFDF5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
 /* Tap Prompt Instruction (Task 4) */
@@ -1076,14 +1081,13 @@ body.invitation-open .revealed-invitation-scene {
 /* Task 8: "Celebrate a New Chapter With Us As" */
 .invitation-opener {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.8vw, 0.96rem);
-  font-weight: 700;
+  font-size: clamp(0.82rem, 1.8vw, 1rem);
+  font-weight: 800;
   letter-spacing: clamp(0.12em, 0.3vw, 0.2em);
   text-transform: uppercase;
-  color: var(--deep-forest-green);
+  color: #02382E;
   line-height: 1.4;
   margin: 0;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 /* Task 8: "Jennina" */
@@ -1096,10 +1100,10 @@ body.invitation-open .revealed-invitation-scene {
 .celebrant-name {
   font-family: var(--font-script);
   font-size: clamp(3.6rem, 9vw, 5.2rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
-  color: var(--emerald-green);
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.18), 0 0 18px rgba(212, 175, 55, 0.35);
+  color: #01261F;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
   display: inline-block;
   padding: 0;
@@ -1121,10 +1125,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .milestone-word {
   font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 2.6vw, 1.45rem);
-  font-weight: 700;
+  font-size: clamp(1.08rem, 2.6vw, 1.48rem);
+  font-weight: 800;
   letter-spacing: 0.25em;
-  color: var(--deep-forest-green);
+  color: #02382E;
 }
 
 .milestone-number {
@@ -1154,12 +1158,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .subtitle-text {
   font-family: var(--font-serif);
-  font-size: clamp(0.82rem, 1.8vw, 1rem);
+  font-size: clamp(0.88rem, 1.8vw, 1.05rem);
   font-style: italic;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.15em;
-  color: var(--deep-forest-green);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+  color: #02382E;
 }
 
 /* Emerald Roses Garland Accent (From PDF Page 1) */
@@ -1210,10 +1213,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .weekday-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.6vw, 0.84rem);
-  font-weight: 700;
+  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
+  font-weight: 800;
   letter-spacing: 0.18em;
-  color: var(--deep-forest-green);
+  color: #02382E;
 }
 
 .col-date-hero {
@@ -1224,10 +1227,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .month-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.68rem, 1.5vw, 0.8rem);
-  font-weight: 700;
+  font-size: clamp(0.72rem, 1.5vw, 0.84rem);
+  font-weight: 800;
   letter-spacing: 0.22em;
-  color: var(--deep-forest-green);
+  color: #02382E;
 }
 
 .date-number {
@@ -1241,10 +1244,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .time-label {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.6vw, 0.84rem);
-  font-weight: 700;
+  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
+  font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--deep-forest-green);
+  color: #02382E;
   white-space: nowrap;
 }
 
@@ -1760,10 +1763,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .save-date-full {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 3.2vw, 1.65rem);
+  font-size: clamp(1.25rem, 3.2vw, 1.7rem);
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--deep-forest-green);
+  color: #01261F;
   display: block;
 }
 
@@ -1791,19 +1794,19 @@ body.invitation-open .revealed-invitation-scene {
 
 .save-date-time {
   font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 2vw, 1.15rem);
-  font-weight: 700;
+  font-size: clamp(0.92rem, 2vw, 1.18rem);
+  font-weight: 800;
   letter-spacing: 0.18em;
-  color: var(--deep-forest-green);
+  color: #02382E;
 }
 
 .save-date-note {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.6vw, 0.85rem);
+  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--emerald-green);
+  color: #02382E;
   margin-top: 6px;
 }
 
@@ -1929,10 +1932,12 @@ body.invitation-open .revealed-invitation-scene {
 
 .countdown-target-caption {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.5vw, 0.84rem);
+  font-size: clamp(0.76rem, 1.5vw, 0.88rem);
+  font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--gold-light);
-  opacity: 0.85;
+  color: #FFFDF5;
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
   margin-top: 14px;
   text-align: center;
 }
@@ -2014,15 +2019,18 @@ body.invitation-open .revealed-invitation-scene {
 
 .calendar-month-title {
   margin: 2px 0;
-  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  color: #01261F;
+  font-weight: 800;
 }
 
 .calendar-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.6vw, 0.85rem);
+  font-size: clamp(0.76rem, 1.6vw, 0.9rem);
   font-style: italic;
   letter-spacing: 0.14em;
-  color: var(--deep-forest-green);
+  color: #02382E;
+  font-weight: 700;
 }
 
 .calendar-grid-wrapper {
@@ -2047,10 +2055,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .weekday-cell {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.6vw, 0.85rem);
-  font-weight: 700;
+  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
+  font-weight: 800;
   letter-spacing: 0.1em;
-  color: var(--deep-forest-green);
+  color: #02382E;
   text-align: center;
 }
 
@@ -2075,9 +2083,9 @@ body.invitation-open .revealed-invitation-scene {
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 1.9vw, 1.08rem);
-  font-weight: 700;
-  color: var(--deep-forest-green);
+  font-size: clamp(0.92rem, 1.9vw, 1.12rem);
+  font-weight: 800;
+  color: #02382E;
   border-radius: 6px;
 }
 
@@ -2090,8 +2098,9 @@ body.invitation-open .revealed-invitation-scene {
   background: linear-gradient(135deg, #02382E 0%, #064E3B 100%);
   border: 2px solid var(--royal-gold);
   border-radius: 50%;
-  color: var(--gold-bright);
+  color: #FFFFFF;
   font-weight: 800;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.7);
   box-shadow: 0 0 14px rgba(212, 175, 55, 0.85), 0 3px 8px rgba(0, 0, 0, 0.4);
   animation: highlightPulse 2.8s ease-in-out infinite;
   z-index: 5;
@@ -2206,16 +2215,19 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .venue-title {
-  font-size: clamp(1.25rem, 3.2vw, 1.65rem);
+  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+  color: #01261F;
+  font-weight: 800;
   margin-bottom: 2px;
 }
 
 .venue-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(0.68rem, 1.5vw, 0.8rem);
+  font-size: clamp(0.74rem, 1.5vw, 0.85rem);
   font-style: italic;
   letter-spacing: 0.12em;
-  color: var(--deep-forest-green);
+  color: #02382E;
+  font-weight: 700;
 }
 
 .venue-details-content {
@@ -2234,11 +2246,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .venue-primary-name {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2.7vw, 1.45rem);
+  font-size: clamp(1.15rem, 2.7vw, 1.5rem);
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--deep-forest-green);
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  color: #01261F;
 }
 
 .venue-hall-name {
@@ -2277,9 +2288,10 @@ body.invitation-open .revealed-invitation-scene {
 .venue-full-address {
   font-family: var(--font-body);
   font-style: normal;
-  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
-  line-height: 1.45;
-  color: var(--deep-forest-green);
+  font-size: clamp(0.86rem, 1.8vw, 1rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: #02382E;
   text-align: center;
 }
 
@@ -2298,19 +2310,19 @@ body.invitation-open .revealed-invitation-scene {
 
 .landmark-badge {
   font-family: var(--font-serif);
-  font-size: 0.6rem;
+  font-size: 0.64rem;
   font-weight: 800;
   letter-spacing: 0.2em;
-  color: var(--emerald-green);
+  color: #01261F;
   margin-bottom: 2px;
 }
 
 .venue-landmark-text {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.5vw, 0.84rem);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--deep-forest-green);
+  font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #02382E;
   text-align: center;
 }
 
@@ -2430,20 +2442,20 @@ body.invitation-open .revealed-invitation-scene {
 
 .footer-monogram {
   font-family: var(--font-serif);
-  font-size: clamp(0.82rem, 1.8vw, 0.98rem);
-  font-weight: 700;
+  font-size: clamp(0.85rem, 1.8vw, 1.02rem);
+  font-weight: 800;
   letter-spacing: 0.28em;
-  color: #FFFDF5;
-  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
 }
 
 .footer-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(0.74rem, 1.4vw, 0.86rem);
+  font-size: clamp(0.78rem, 1.4vw, 0.9rem);
   font-style: italic;
   letter-spacing: 0.14em;
-  color: #F8F1DF;
-  opacity: 0.95;
+  color: #FFFDF5;
+  opacity: 1;
 }
 
 /* ==========================================================================
@@ -2503,12 +2515,12 @@ body.invitation-open .revealed-invitation-scene {
 
 .traditions-main-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   font-style: italic;
   letter-spacing: 0.14em;
-  color: var(--cream);
-  opacity: 0.95;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  color: #FFFDF5;
+  opacity: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
 .traditions-ornament {
@@ -2799,10 +2811,10 @@ body.invitation-open .revealed-invitation-scene {
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  background: rgba(255, 253, 245, 0.92);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(255, 253, 245, 0.96);
+  border: 1px solid rgba(212, 175, 55, 0.45);
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   transition: all 0.25s ease;
 }
 
@@ -2834,9 +2846,9 @@ body.invitation-open .revealed-invitation-scene {
 
 .entourage-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  font-size: clamp(0.98rem, 1.2vw, 1.1rem);
   font-weight: 700;
-  color: #022B23;
+  color: #01261F;
   letter-spacing: 0.04em;
   line-height: 1.35;
   word-break: break-word;
@@ -3140,12 +3152,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .attire-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
-  font-weight: 700;
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--emerald-green);
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.45);
+  color: #01261F;
   margin-bottom: 8px;
 }
 
@@ -3200,9 +3211,9 @@ body.invitation-open .revealed-invitation-scene {
 
 .subpart-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-  font-weight: 700;
-  color: var(--deep-forest-green);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 800;
+  color: #01261F;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 2px;
@@ -3229,14 +3240,14 @@ body.invitation-open .revealed-invitation-scene {
 
 .swatches-label {
   font-family: var(--font-serif);
-  font-size: clamp(0.7rem, 1.2vw, 0.78rem);
-  font-weight: 700;
+  font-size: clamp(0.74rem, 1.2vw, 0.82rem);
+  font-weight: 800;
   letter-spacing: 0.2em;
-  color: var(--emerald-green);
-  background: rgba(212, 175, 55, 0.14);
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #02382E;
+  background: rgba(255, 253, 245, 0.95);
+  border: 1.5px solid var(--royal-gold);
   border-radius: 14px;
-  padding: 3px 14px;
+  padding: 4px 16px;
 }
 
 .swatches-row {
@@ -3287,9 +3298,9 @@ body.invitation-open .revealed-invitation-scene {
 
 .swatch-color-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.76rem, 1.3vw, 0.86rem);
-  font-weight: 700;
-  color: #022B23;
+  font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  font-weight: 800;
+  color: #01261F;
   letter-spacing: 0.04em;
   text-align: center;
 }
@@ -3458,12 +3469,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .gift-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 700;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--emerald-green);
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.45);
+  color: #01261F;
   margin-bottom: 4px;
 }
 
@@ -3479,10 +3489,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .gift-guide-text {
   font-family: var(--font-serif);
-  font-size: clamp(1.08rem, 1.8vw, 1.25rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.28rem);
   font-style: italic;
-  color: #022B23;
-  font-weight: 600;
+  color: #02382E;
+  font-weight: 700;
   line-height: 1.75;
   letter-spacing: 0.02em;
   margin: 0 0 16px 0;
@@ -3493,15 +3503,15 @@ body.invitation-open .revealed-invitation-scene {
   align-items: center;
   gap: 8px;
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.3vw, 0.88rem);
+  font-size: clamp(0.8rem, 1.3vw, 0.9rem);
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #022B23;
+  color: #01261F;
   background: rgba(255, 253, 245, 0.98);
   border: 1.5px solid var(--royal-gold);
   border-radius: 16px;
-  padding: 5px 18px;
+  padding: 6px 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -3578,12 +3588,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .reminders-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.45rem, 3vw, 2.1rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--emerald-green);
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.45);
+  color: #01261F;
   margin-bottom: 4px;
 }
 
@@ -3594,10 +3603,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .reminders-main-text {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.7vw, 1.15rem);
-  color: #022B23;
-  font-weight: 600;
-  line-height: 1.7;
+  font-size: clamp(1.02rem, 1.7vw, 1.18rem);
+  color: #02382E;
+  font-weight: 700;
+  line-height: 1.75;
   max-width: 680px;
   margin: 0 auto 24px auto;
   letter-spacing: 0.02em;
@@ -3638,19 +3647,19 @@ body.invitation-open .revealed-invitation-scene {
 
 .triad-item-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(0.85rem, 1.4vw, 0.98rem);
-  font-weight: 700;
-  color: var(--emerald-green);
+  font-size: clamp(0.9rem, 1.4vw, 1.02rem);
+  font-weight: 800;
+  color: #01261F;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .triad-item-desc {
   font-family: var(--font-serif);
-  font-size: clamp(0.8rem, 1.2vw, 0.88rem);
-  color: #022B23;
+  font-size: clamp(0.84rem, 1.2vw, 0.92rem);
+  color: #02382E;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* --------------------------------------------------------------------------
@@ -3778,22 +3787,22 @@ body.invitation-open .revealed-invitation-scene {
 
 .rsvp-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 700;
+  font-size: clamp(1.85rem, 4vw, 2.45rem);
+  font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--emerald-green);
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.4);
+  color: #01261F;
   margin-bottom: 4px;
 }
 
 .rsvp-subtitle {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.5vw, 0.85rem);
+  font-size: clamp(0.76rem, 1.5vw, 0.88rem);
   font-style: italic;
   letter-spacing: 0.1em;
-  color: var(--deep-forest-green);
-  opacity: 0.9;
+  color: #02382E;
+  font-weight: 700;
+  opacity: 1;
   margin-bottom: 6px;
 }
 
@@ -3813,10 +3822,10 @@ body.invitation-open .revealed-invitation-scene {
 /* Authentic Invitation Message */
 .rsvp-main-message {
   font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 1.6vw, 1.06rem);
-  color: #022B23;
-  font-weight: 600;
-  line-height: 1.65;
+  font-size: clamp(0.96rem, 1.6vw, 1.08rem);
+  color: #02382E;
+  font-weight: 700;
+  line-height: 1.7;
   letter-spacing: 0.015em;
   max-width: 330px;
   margin: 0 auto;
@@ -3827,14 +3836,14 @@ body.invitation-open .revealed-invitation-scene {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 253, 245, 0.95);
+  background: rgba(255, 253, 245, 0.98);
   border: 1.5px solid var(--royal-gold);
   border-radius: 20px;
-  padding: 6px 16px;
+  padding: 7px 18px;
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.3vw, 0.88rem);
+  font-size: clamp(0.82rem, 1.3vw, 0.92rem);
   font-weight: 800;
-  color: #022B23;
+  color: #01261F;
   letter-spacing: 0.03em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -3881,11 +3890,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .notice-text {
   font-family: var(--font-serif-title);
-  font-size: clamp(0.85rem, 1.6vw, 1.02rem);
+  font-size: clamp(0.88rem, 1.6vw, 1.05rem);
   font-weight: 800;
   letter-spacing: 0.14em;
-  color: #FFFDF5;
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+  color: #FFFFFF;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.9);
   text-transform: uppercase;
 }
 
@@ -3926,12 +3935,17 @@ body.invitation-open .revealed-invitation-scene {
 
 /* Primary Zite RSVP Button */
 .btn-rsvp-primary {
-  background: linear-gradient(135deg, var(--emerald-green) 0%, var(--deep-forest-green) 100%);
-  color: var(--cream);
+  background: linear-gradient(135deg, #064E3B 0%, #02382E 100%);
+  color: #FFFFFF;
   border: 2px solid var(--royal-gold);
   box-shadow: 
     0 6px 20px rgba(6, 78, 59, 0.45),
     0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-rsvp-primary .btn-rsvp-label {
+  color: #FFFFFF;
+  font-weight: 800;
 }
 
 .btn-rsvp-primary:hover:not(.btn-disabled) {
@@ -4000,13 +4014,20 @@ body.invitation-open .revealed-invitation-scene {
 /* Helper / Status Note */
 .rsvp-status-note {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.2vw, 0.8rem);
-  color: #65543A;
+  font-size: clamp(0.72rem, 1.2vw, 0.82rem);
+  color: #01261F;
   font-style: italic;
-  margin-top: 4px;
+  font-weight: 700;
+  margin-top: 6px;
   line-height: 1.4;
   min-height: 1.4em;
-  transition: color 0.3s ease;
+  background: rgba(255, 253, 245, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 12px;
+  padding: 4px 14px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .rsvp-status-note.status-pending {
@@ -4014,8 +4035,8 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .rsvp-status-note.status-active {
-  color: #064E3B;
-  font-weight: 600;
+  color: #01261F;
+  font-weight: 700;
 }
 
 /* Mobile Responsive (< 767px) */
