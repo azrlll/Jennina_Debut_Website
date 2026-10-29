@@ -758,7 +758,7 @@
           imgEl.src = outfit.src;
           imgEl.alt = outfit.alt;
           imgEl.className = 'attire-outfit-img';
-          imgEl.loading = 'lazy';
+          imgEl.loading = 'eager';
 
           frameEl.appendChild(imgEl);
           cardEl.appendChild(frameEl);
@@ -797,10 +797,146 @@
     animatedSections.forEach(sec => observer.observe(sec));
   }
 
+
+  // ==========================================================================
+  // PHASE 5: SECTION 10 — ZITE RSVP INTEGRATION
+  // Primary Reference: Page 6 of DEBUT INVITATION.pdf
+  // ==========================================================================
+
+  /**
+   * Official Zite RSVP Configuration
+   * ---------------------------------
+   * The RSVP system is being hosted separately using Zite.
+   * Paste the official published Zite RSVP website URL below when available.
+   *
+   * IMPORTANT:
+   * Do NOT use the editor link (e.g., https://app.zite.com/editor/oinyLbhrWgus/edit/gXFa)
+   * as the destination. The system will detect and reject editor links.
+   *
+   * Example of a valid published link: "https://jennina18thdebut.zite.site"
+   */
+  const RSVP_URL = "https://3gtkwbxbwf.zite.so";
+
+  /**
+   * Optional Facebook Messenger RSVP Configuration
+   * ----------------------------------------------
+   * If the celebrant wants guests to reply via Messenger, paste the link below:
+   * Example: "https://m.me/jennina.debut"
+   * If left empty, the Messenger RSVP button remains safely hidden.
+   */
+  const MESSENGER_URL = "";
+
+  /**
+   * Detects whether a given URL is an internal Zite editor/admin link
+   */
+  function isZiteEditorUrl(url) {
+    if (!url || typeof url !== 'string') return false;
+    const lower = url.trim().toLowerCase();
+    return lower.includes('zite.com/editor') || lower.includes('/edit/') || lower.includes('editor.zite');
+  }
+
+  /**
+   * Initializes and manages the Zite RSVP and Messenger integration
+   * Supports optional parameter overrides for testability without mutating source constants.
+   */
+  function initRsvpIntegration(customRsvpUrl, customMessengerUrl) {
+    const btnZite = document.getElementById('btnZiteRsvp');
+    const lblZite = document.getElementById('lblZiteRsvp');
+    const btnMessenger = document.getElementById('btnMessengerRsvp');
+    const statusNote = document.getElementById('rsvpStatusNote');
+
+    if (!btnZite) return;
+
+    // Determine effective URLs (passed arguments take precedence for testing)
+    const effectiveRsvpUrl = typeof customRsvpUrl !== 'undefined' ? customRsvpUrl : RSVP_URL;
+    const effectiveMessengerUrl = typeof customMessengerUrl !== 'undefined' ? customMessengerUrl : MESSENGER_URL;
+
+    const trimmedRsvp = (effectiveRsvpUrl || '').trim();
+    const isEditor = isZiteEditorUrl(trimmedRsvp);
+    const hasValidPublishedUrl = Boolean(trimmedRsvp && !isEditor);
+
+    // Remove any previously attached click listener by cloning or direct property assignment
+    btnZite.onclick = null;
+
+    if (hasValidPublishedUrl) {
+      // ----------------------------------------------------------------------
+      // ACTIVATED STATE: Valid Published Zite RSVP URL
+      // ----------------------------------------------------------------------
+      btnZite.href = trimmedRsvp;
+      btnZite.target = "_blank";
+      btnZite.rel = "noopener noreferrer";
+      btnZite.classList.remove('btn-disabled');
+      btnZite.removeAttribute('aria-disabled');
+      btnZite.setAttribute('title', 'Open official Zite RSVP form in a new tab');
+      if (lblZite) lblZite.textContent = "Confirm Your Attendance";
+
+      if (statusNote) {
+        statusNote.textContent = "You will be safely redirected to our official RSVP page.";
+        statusNote.className = "rsvp-status-note status-active";
+      }
+    } else {
+      // ----------------------------------------------------------------------
+      // DISABLED STATE: Empty URL or Disallowed Editor URL
+      // ----------------------------------------------------------------------
+      btnZite.href = "javascript:void(0);";
+      btnZite.removeAttribute('target');
+      btnZite.removeAttribute('rel');
+      btnZite.classList.add('btn-disabled');
+      btnZite.setAttribute('aria-disabled', 'true');
+      btnZite.setAttribute('title', 'RSVP form link will be available soon');
+      if (lblZite) lblZite.textContent = "RSVP Link Coming Soon";
+
+      if (isEditor) {
+        console.warn("[Zite RSVP Integration] The configured URL is an editor link ('" + trimmedRsvp + "') which is not accessible to guests. Please configure the published Zite RSVP URL.");
+        if (statusNote) {
+          statusNote.textContent = "RSVP link is currently being prepared. Kindly check back shortly!";
+          statusNote.className = "rsvp-status-note status-pending";
+        }
+      } else {
+        if (statusNote) {
+          statusNote.textContent = "The official RSVP page will open here soon. Kindly check back shortly!";
+          statusNote.className = "rsvp-status-note status-pending";
+        }
+      }
+
+      // Safe click interceptor: Prevents navigation and courteously informs the guest
+      btnZite.onclick = function (e) {
+        e.preventDefault();
+        if (statusNote) {
+          statusNote.textContent = "The official RSVP link is being finalized. Kindly check back shortly!";
+          statusNote.className = "rsvp-status-note status-pending";
+        }
+        announce("The official RSVP link is coming soon. Please check back shortly.");
+      };
+    }
+
+    // ------------------------------------------------------------------------
+    // OPTIONAL MESSENGER RSVP INTEGRATION
+    // ------------------------------------------------------------------------
+    if (btnMessenger) {
+      const trimmedMessenger = (effectiveMessengerUrl || '').trim();
+      if (trimmedMessenger) {
+        btnMessenger.href = trimmedMessenger;
+        btnMessenger.target = "_blank";
+        btnMessenger.rel = "noopener noreferrer";
+        btnMessenger.style.display = "inline-flex";
+      } else {
+        btnMessenger.style.display = "none";
+        btnMessenger.removeAttribute('href');
+      }
+    }
+  }
+
+  // Expose test helper on window for automated verification without modifying source
+  window.__setRsvpUrlsForTesting = function (ziteUrl, messengerUrl) {
+    initRsvpIntegration(ziteUrl, messengerUrl);
+  };
+
   // Initialize Dynamic Elements
   populateTraditionLists();
   initMobileTraditionTabs();
   populateAttireSection();
   initSectionObserver();
+  initRsvpIntegration();
 
 })();

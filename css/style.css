@@ -1129,10 +1129,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .milestone-number {
   font-family: var(--font-script);
-  font-size: clamp(2.2rem, 5.2vw, 3.2rem);
-  font-weight: 700;
-  color: var(--royal-gold);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25), 0 0 12px rgba(212, 175, 55, 0.5);
+  font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+  color: #022B23;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.4);
   margin-left: -2px;
 }
 
@@ -1232,11 +1232,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .date-number {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
   font-weight: 800;
   line-height: 1;
-  color: var(--royal-gold);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  color: #022B23;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.35);
 }
 
 .time-label {
@@ -1272,10 +1272,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .venue-preposition {
   font-family: var(--font-serif);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.25em;
-  color: var(--royal-gold);
-  font-weight: 700;
+  color: #022B23;
+  font-weight: 800;
 }
 
 .venue-name {
@@ -1777,15 +1777,16 @@ body.invitation-open .revealed-invitation-scene {
 
 .save-date-day {
   font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 2vw, 1.15rem);
-  font-weight: 700;
+  font-size: clamp(0.92rem, 2vw, 1.18rem);
+  font-weight: 800;
   letter-spacing: 0.22em;
-  color: var(--royal-gold);
+  color: #022B23;
 }
 
 .save-date-dot {
-  color: var(--royal-gold);
+  color: #022B23;
   font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .save-date-time {
@@ -1918,10 +1919,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .countdown-label {
   font-family: var(--font-serif);
-  font-size: clamp(0.62rem, 1.4vw, 0.78rem);
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--royal-gold);
+  font-size: clamp(0.64rem, 1.4vw, 0.8rem);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #FFFDF5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   margin-top: 6px;
 }
 
@@ -2004,10 +2006,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .calendar-year-label {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.8vw, 0.95rem);
-  font-weight: 700;
+  font-size: clamp(0.82rem, 1.8vw, 0.98rem);
+  font-weight: 800;
   letter-spacing: 0.25em;
-  color: var(--royal-gold);
+  color: #022B23;
 }
 
 .calendar-month-title {
@@ -2053,8 +2055,11 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .weekday-cell.fri-highlight {
-  color: #B8860B;
+  color: #022B23;
   font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--royal-gold);
+  text-underline-offset: 3px;
 }
 
 .calendar-days-grid {
@@ -2238,10 +2243,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .venue-hall-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 2vw, 1.15rem);
-  font-weight: 700;
+  font-size: clamp(0.92rem, 2vw, 1.18rem);
+  font-weight: 800;
   letter-spacing: 0.16em;
-  color: var(--royal-gold);
+  color: #022B23;
   margin-top: 2px;
 }
 
@@ -2262,10 +2267,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .address-label {
   font-family: var(--font-serif);
-  font-size: 0.62rem;
-  font-weight: 700;
+  font-size: 0.66rem;
+  font-weight: 800;
   letter-spacing: 0.22em;
-  color: var(--royal-gold);
+  color: #022B23;
   margin-bottom: 2px;
 }
 
@@ -2425,19 +2430,20 @@ body.invitation-open .revealed-invitation-scene {
 
 .footer-monogram {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.8vw, 0.95rem);
+  font-size: clamp(0.82rem, 1.8vw, 0.98rem);
   font-weight: 700;
   letter-spacing: 0.28em;
-  color: var(--royal-gold);
+  color: #FFFDF5;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 .footer-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(0.7rem, 1.4vw, 0.82rem);
+  font-size: clamp(0.74rem, 1.4vw, 0.86rem);
   font-style: italic;
   letter-spacing: 0.14em;
-  color: var(--cream);
-  opacity: 0.8;
+  color: #F8F1DF;
+  opacity: 0.95;
 }
 
 /* ==========================================================================
@@ -2486,12 +2492,12 @@ body.invitation-open .revealed-invitation-scene {
 
 .traditions-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.45rem, 3.2vw, 2.15rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--royal-gold);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.4);
+  color: #FFFDF5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 16px rgba(212, 175, 55, 0.5);
   margin-bottom: 6px;
 }
 
@@ -2652,7 +2658,7 @@ body.invitation-open .revealed-invitation-scene {
   width: 100%;
   height: 100%;
   object-fit: fill;
-  opacity: 0.18;
+  opacity: 0.10;
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: multiply;
@@ -2738,21 +2744,22 @@ body.invitation-open .revealed-invitation-scene {
 
 .panel-title {
   font-family: var(--font-serif-title);
-  font-size: clamp(1.3rem, 2.3vw, 1.65rem);
-  font-weight: 700;
+  font-size: clamp(1.35rem, 2.3vw, 1.7rem);
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--emerald-green);
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.45);
+  color: #022B23;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.35);
   margin-bottom: 2px;
 }
 
 .panel-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(0.74rem, 1.4vw, 0.84rem);
+  font-size: clamp(0.78rem, 1.4vw, 0.88rem);
   font-style: italic;
   letter-spacing: 0.08em;
-  color: #554428;
+  color: #022B23;
+  font-weight: 600;
   margin-bottom: 8px;
 }
 
@@ -2791,9 +2798,11 @@ body.invitation-open .revealed-invitation-scene {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 8px 10px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  padding: 8px 12px;
+  background: rgba(255, 253, 245, 0.92);
+  border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
 }
 
@@ -2825,9 +2834,9 @@ body.invitation-open .revealed-invitation-scene {
 
 .entourage-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.92rem, 1.15vw, 1.04rem);
-  font-weight: 600;
-  color: var(--deep-forest-green);
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  font-weight: 700;
+  color: #022B23;
   letter-spacing: 0.04em;
   line-height: 1.35;
   word-break: break-word;
@@ -3142,9 +3151,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .attire-description {
   font-family: var(--font-serif);
-  font-size: clamp(0.92rem, 1.6vw, 1.08rem);
-  color: #3D3322;
-  line-height: 1.65;
+  font-size: clamp(0.98rem, 1.6vw, 1.14rem);
+  color: #022B23;
+  font-weight: 600;
+  line-height: 1.7;
   max-width: 680px;
   margin: 0 auto 10px auto;
   letter-spacing: 0.03em;
@@ -3200,9 +3210,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .subpart-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.4vw, 0.88rem);
+  font-size: clamp(0.82rem, 1.4vw, 0.92rem);
   font-style: italic;
-  color: #554428;
+  color: #022B23;
+  font-weight: 600;
   letter-spacing: 0.06em;
 }
 
@@ -3276,9 +3287,9 @@ body.invitation-open .revealed-invitation-scene {
 
 .swatch-color-name {
   font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.3vw, 0.82rem);
-  font-weight: 600;
-  color: var(--deep-forest-green);
+  font-size: clamp(0.76rem, 1.3vw, 0.86rem);
+  font-weight: 700;
+  color: #022B23;
   letter-spacing: 0.04em;
   text-align: center;
 }
@@ -3468,10 +3479,11 @@ body.invitation-open .revealed-invitation-scene {
 
 .gift-guide-text {
   font-family: var(--font-serif);
-  font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.08rem, 1.8vw, 1.25rem);
   font-style: italic;
-  color: var(--deep-forest-green);
-  line-height: 1.7;
+  color: #022B23;
+  font-weight: 600;
+  line-height: 1.75;
   letter-spacing: 0.02em;
   margin: 0 0 16px 0;
 }
@@ -3481,15 +3493,15 @@ body.invitation-open .revealed-invitation-scene {
   align-items: center;
   gap: 8px;
   font-family: var(--font-serif);
-  font-size: clamp(0.75rem, 1.3vw, 0.84rem);
-  font-weight: 700;
+  font-size: clamp(0.78rem, 1.3vw, 0.88rem);
+  font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--royal-gold);
-  background: rgba(255, 253, 245, 0.95);
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #022B23;
+  background: rgba(255, 253, 245, 0.98);
+  border: 1.5px solid var(--royal-gold);
   border-radius: 16px;
-  padding: 4px 16px;
+  padding: 5px 18px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -3582,9 +3594,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .reminders-main-text {
   font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 1.7vw, 1.1rem);
-  color: #3D3322;
-  line-height: 1.65;
+  font-size: clamp(1rem, 1.7vw, 1.15rem);
+  color: #022B23;
+  font-weight: 600;
+  line-height: 1.7;
   max-width: 680px;
   margin: 0 auto 24px auto;
   letter-spacing: 0.02em;
@@ -3634,9 +3647,10 @@ body.invitation-open .revealed-invitation-scene {
 
 .triad-item-desc {
   font-family: var(--font-serif);
-  font-size: clamp(0.76rem, 1.2vw, 0.84rem);
-  color: #554428;
-  line-height: 1.45;
+  font-size: clamp(0.8rem, 1.2vw, 0.88rem);
+  color: #022B23;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------
@@ -3682,6 +3696,358 @@ body.invitation-open .revealed-invitation-scene {
     animation: none !important;
   }
   .attire-photo-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   PHASE 5: SECTION 10 — RSVP (ZITE INTEGRATION)
+   Primary Reference: Page 6 of DEBUT INVITATION.pdf
+   ========================================================================== */
+.rsvp-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 10px 16px 25px 16px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.rsvp-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rsvp-card {
+  max-width: 480px;
+  min-height: clamp(700px, 88vh, 760px);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(6, 78, 59, 0.35),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.4);
+  position: relative;
+  background-color: var(--ivory);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.rsvp-arch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  display: block;
+}
+
+.rsvp-card-content {
+  position: relative;
+  z-index: 10;
+  padding: clamp(112px, 14.5vh, 138px) clamp(24px, 5.5vw, 38px) clamp(36px, 4.5vh, 52px) clamp(24px, 5.5vw, 38px);
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rsvp-crown-badge {
+  width: 40px;
+  margin: 0 auto 6px auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+}
+
+.rsvp-crown-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rsvp-header {
+  margin-bottom: 8px;
+}
+
+.rsvp-title {
+  font-family: var(--font-serif-title);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--emerald-green);
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.4);
+  margin-bottom: 4px;
+}
+
+.rsvp-subtitle {
+  font-family: var(--font-serif);
+  font-size: clamp(0.72rem, 1.5vw, 0.85rem);
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: var(--deep-forest-green);
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+.rsvp-divider-ornament {
+  color: var(--royal-gold);
+  font-size: 1rem;
+}
+
+.rsvp-body-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Authentic Invitation Message */
+.rsvp-main-message {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 1.6vw, 1.06rem);
+  color: #022B23;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.015em;
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+/* Deadline Badge */
+.rsvp-deadline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 253, 245, 0.95);
+  border: 1.5px solid var(--royal-gold);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: var(--font-serif);
+  font-size: clamp(0.78rem, 1.3vw, 0.88rem);
+  font-weight: 800;
+  color: #022B23;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.deadline-icon {
+  font-size: 0.95rem;
+}
+
+/* NO RSVP, NO SEAT Prominent Alert Box */
+.rsvp-notice-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #02382E 0%, #064E3B 100%);
+  border: 1.5px solid var(--royal-gold);
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 4px 0 6px 0;
+  box-shadow: 
+    0 4px 15px rgba(2, 56, 46, 0.35),
+    0 0 16px rgba(212, 175, 55, 0.25);
+}
+
+.notice-border-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.8);
+  pointer-events: none;
+  animation: rsvpGlowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes rsvpGlowPulse {
+  0% { box-shadow: 0 0 4px rgba(212, 175, 55, 0.2); }
+  100% { box-shadow: 0 0 14px rgba(212, 175, 55, 0.7); }
+}
+
+.notice-icon {
+  font-size: 1rem;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.6));
+}
+
+.notice-text {
+  font-family: var(--font-serif-title);
+  font-size: clamp(0.85rem, 1.6vw, 1.02rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #FFFDF5;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+  text-transform: uppercase;
+}
+
+/* Actions Group */
+.rsvp-actions-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Royal RSVP Button Styles */
+.btn-royal-rsvp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 24px;
+  width: 100%;
+  max-width: 290px;
+  border-radius: 30px;
+  font-family: var(--font-serif-title);
+  font-size: clamp(0.84rem, 1.4vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Primary Zite RSVP Button */
+.btn-rsvp-primary {
+  background: linear-gradient(135deg, var(--emerald-green) 0%, var(--deep-forest-green) 100%);
+  color: var(--cream);
+  border: 2px solid var(--royal-gold);
+  box-shadow: 
+    0 6px 20px rgba(6, 78, 59, 0.45),
+    0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-rsvp-primary:hover:not(.btn-disabled) {
+  transform: translateY(-2.5px) scale(1.02);
+  color: #FFFFFF;
+  border-color: #F3E5AB;
+  box-shadow: 
+    0 10px 25px rgba(6, 78, 59, 0.6),
+    0 0 22px rgba(212, 175, 55, 0.65);
+}
+
+.btn-rsvp-primary:active:not(.btn-disabled) {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Disabled State (When RSVP_URL is empty) */
+.btn-royal-rsvp.btn-disabled {
+  background: linear-gradient(135deg, #4A5D54 0%, #2F3E37 100%) !important;
+  color: #D1D8D4 !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+  cursor: not-allowed !important;
+  opacity: 0.85;
+  pointer-events: auto;
+}
+
+.btn-royal-rsvp.btn-disabled:hover {
+  transform: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-royal-rsvp.btn-disabled .btn-rsvp-arrow {
+  opacity: 0.5;
+}
+
+/* Secondary Messenger Button */
+.btn-rsvp-messenger {
+  background: linear-gradient(135deg, #0084FF 0%, #0066CC 100%);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 15px rgba(0, 132, 255, 0.3),
+    0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.btn-rsvp-messenger:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 8px 22px rgba(0, 132, 255, 0.5),
+    0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-rsvp-icon {
+  font-size: 1.1rem;
+}
+
+.btn-rsvp-arrow {
+  font-size: 0.9rem;
+  transition: transform 0.25s ease;
+}
+
+.btn-royal-rsvp:hover:not(.btn-disabled) .btn-rsvp-arrow {
+  transform: translateX(3px);
+}
+
+/* Helper / Status Note */
+.rsvp-status-note {
+  font-family: var(--font-serif);
+  font-size: clamp(0.72rem, 1.2vw, 0.8rem);
+  color: #65543A;
+  font-style: italic;
+  margin-top: 4px;
+  line-height: 1.4;
+  min-height: 1.4em;
+  transition: color 0.3s ease;
+}
+
+.rsvp-status-note.status-pending {
+  color: #7A5814;
+}
+
+.rsvp-status-note.status-active {
+  color: #064E3B;
+  font-weight: 600;
+}
+
+/* Mobile Responsive (< 767px) */
+@media (max-width: 767px) {
+  .rsvp-card-content {
+    padding: clamp(105px, 14vh, 130px) 18px 36px 18px;
+    max-width: 100%;
+  }
+  .rsvp-main-message {
+    font-size: 0.88rem;
+  }
+  .btn-royal-rsvp {
+    max-width: 100%;
+    min-height: 50px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Accessibility: Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .rsvp-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .notice-border-glow {
+    animation: none !important;
+  }
+  .btn-royal-rsvp {
+    transition: none !important;
+  }
+  .btn-royal-rsvp:hover {
     transform: none !important;
   }
 }

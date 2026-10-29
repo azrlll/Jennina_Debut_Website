@@ -15,6 +15,7 @@
   
   <!-- Main Luxury Invitation Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/decorations/royal-crown.png">
 
   <!-- Preload Key Phase 2 Royal Assets -->
   <link rel="preload" as="image" href="assets/decorations/royal-emerald-frame.png">
@@ -1111,6 +1112,103 @@
       </section>
 
       <!-- Gold Floral Divider 10 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 5: SECTION 10 — RSVP (ZITE INTEGRATION)
+           Primary Reference: Page 6 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section rsvp-section" id="rsvpSection" aria-label="RSVP and Attendance Confirmation">
+        <div class="section-parchment-card rsvp-card" id="rsvpCard">
+          
+          <!-- Authentic Royal Arched Frame Background (From Page 6 of PDF) -->
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/royal-venue-arch.jpg" alt="" class="frame-bg-img rsvp-arch-img">
+          </div>
+
+          <div class="section-card-content rsvp-card-content">
+            
+            <!-- Royal Crown Crest Badge -->
+            <div class="rsvp-crown-badge" aria-hidden="true">
+              <img src="assets/decorations/royal-crown.png" alt="Royal Crown Crest" class="rsvp-crown-img">
+            </div>
+
+            <!-- Required Heading: "RSVP" -->
+            <header class="rsvp-header">
+              <h2 class="section-title rsvp-title">RSVP</h2>
+              <p class="rsvp-subtitle">Reserve Your Place in the Royal Celebration</p>
+              <div class="rsvp-divider-ornament" aria-hidden="true">❧ ❦ ☙</div>
+            </header>
+
+            <div class="rsvp-body-content">
+              
+              <!-- Required Message -->
+              <p class="rsvp-main-message">
+                We have reserved seats for you. Hope to see you on my birthday. Kindly confirm on or before January 15, 2027 by replying through Messenger or our website.
+              </p>
+
+              <!-- Required RSVP Deadline Display -->
+              <div class="rsvp-deadline-badge">
+                <span class="deadline-icon" aria-hidden="true">📅</span>
+                <span class="deadline-text">Kindly Confirm on or Before January 15, 2027</span>
+              </div>
+
+              <!-- Required Important Notice: NO RSVP, NO SEAT -->
+              <div class="rsvp-notice-box" role="note" aria-label="Important RSVP Policy">
+                <div class="notice-border-glow"></div>
+                <span class="notice-icon" aria-hidden="true">⚠️</span>
+                <span class="notice-text">NO RSVP, NO SEAT</span>
+              </div>
+
+              <!-- RSVP Actions & Buttons Container -->
+              <div class="rsvp-actions-group">
+                
+                <!-- Primary Zite RSVP Button -->
+                <a href="https://3gtkwbxbwf.zite.so" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-royal-rsvp btn-rsvp-primary" 
+                   id="btnZiteRsvp" 
+                   role="button"
+                   aria-label="Confirm Your Attendance on Zite RSVP"
+                   tabindex="0">
+                  <span class="btn-rsvp-icon" aria-hidden="true">👑</span>
+                  <span class="btn-rsvp-label" id="lblZiteRsvp">Confirm Your Attendance</span>
+                  <span class="btn-rsvp-arrow" aria-hidden="true">➔</span>
+                </a>
+
+                <!-- Optional Messenger RSVP Button (Hidden by default until configured) -->
+                <a href="#" 
+                   class="btn-royal-rsvp btn-rsvp-messenger" 
+                   id="btnMessengerRsvp" 
+                   role="button"
+                   aria-label="Reply Through Messenger"
+                   style="display: none;"
+                   tabindex="0">
+                  <span class="btn-rsvp-icon" aria-hidden="true">💬</span>
+                  <span class="btn-rsvp-label">Reply Through Messenger</span>
+                  <span class="btn-rsvp-arrow" aria-hidden="true">➔</span>
+                </a>
+
+                <!-- Helper / Status Note -->
+                <p class="rsvp-status-note status-active" id="rsvpStatusNote" aria-live="polite">
+                  You will be safely redirected to our official RSVP page.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 11 -->
       <div class="royal-floral-divider" aria-hidden="true">
         <span class="divider-line left"></span>
         <span class="divider-flourish">❧ ❦ ☙</span>

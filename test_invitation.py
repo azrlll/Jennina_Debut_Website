@@ -166,7 +166,11 @@ with sync_playwright() as p:
     # Women's Outfits Gallery
     women_outfits = page.locator("#galleryGuests .attire-photo-card")
     assert women_outfits.count() == 6, f"Expected 6 women's outfits, got {women_outfits.count()}"
+    page.locator("#galleryGuests").scroll_into_view_if_needed()
+    page.wait_for_timeout(500)
     for i in range(6):
+      page.locator(f"#galleryGuests .attire-photo-card:nth-child({i+1})").scroll_into_view_if_needed()
+      page.wait_for_timeout(100)
       img_loaded = page.evaluate(f"() => document.querySelectorAll('#galleryGuests img')[{i}].complete && document.querySelectorAll('#galleryGuests img')[{i}].naturalWidth > 0")
       assert img_loaded, f"Women's outfit image {i+1} failed to load"
     print("  [PASS] 6 Women's royal framed gowns verified and loaded")
@@ -211,10 +215,91 @@ with sync_playwright() as p:
     page.screenshot(path="reference/desktop_11_reminders.png")
     print("  [PASS] Section 3 (Important Reminders & Triad Cards) verified")
 
+    # =========================================================================
+    # PHASE 5: SECTION 10 — ZITE RSVP INTEGRATION VERIFICATION
+    # =========================================================================
+    print("\n--- Testing Phase 5: Zite RSVP Integration ---")
+    s10 = page.locator("#rsvpSection")
+    s10.scroll_into_view_if_needed()
+    page.wait_for_timeout(500)
+
+    # 1. Visual Elements Verification
+    assert page.is_visible("#rsvpSection"), "RSVP section missing"
+    assert page.is_visible("#rsvpSection .rsvp-title"), "RSVP title missing"
+    assert page.locator("#rsvpSection .rsvp-title").inner_text() == "RSVP", "RSVP title text mismatch"
+    assert page.is_visible(".rsvp-crown-badge"), "RSVP crown crest missing"
+    assert page.is_visible(".rsvp-arch-img"), "RSVP royal arched frame missing"
+
+    # 2. Required Text Verification
+    assert page.is_visible(".rsvp-main-message"), "RSVP main message missing"
+    rsvp_msg = page.locator(".rsvp-main-message").inner_text()
+    assert "reserved seats for you" in rsvp_msg, f"Message missing expected text, got: {rsvp_msg}"
+    assert "January 15, 2027" in rsvp_msg, "Deadline date missing from message"
+    assert "replying through Messenger or our website" in rsvp_msg, "Channels missing from message"
+
+    # 3. Required Important Notice: NO RSVP, NO SEAT
+    assert page.is_visible(".rsvp-notice-box"), "NO RSVP, NO SEAT notice box missing"
+    notice_text = page.locator(".rsvp-notice-box .notice-text").inner_text()
+    assert notice_text == "NO RSVP, NO SEAT", f"Expected 'NO RSVP, NO SEAT', got {notice_text}"
+
+    # 4. Required RSVP Deadline Badge
+    assert page.is_visible(".rsvp-deadline-badge"), "RSVP deadline badge missing"
+    deadline_text = page.locator(".rsvp-deadline-badge .deadline-text").inner_text()
+    assert "January 15, 2027" in deadline_text, f"Deadline badge missing date, got: {deadline_text}"
+
+    # 5. Live Configured State: RSVP_URL = "https://3gtkwbxbwf.zite.so"
+    print("  Subtest 5A: Verifying live configured published RSVP URL state...")
+    btn_zite = page.locator("#btnZiteRsvp")
+    lbl_zite = page.locator("#lblZiteRsvp")
+    btn_messenger = page.locator("#btnMessengerRsvp")
+
+    assert btn_zite.is_visible(), "Zite RSVP button missing"
+    assert "Confirm Your Attendance" in lbl_zite.text_content(), f"Expected 'Confirm Your Attendance', got {lbl_zite.text_content()}"
+    assert "btn-disabled" not in btn_zite.get_attribute("class"), "Button should NOT have .btn-disabled when URL is configured"
+    assert btn_zite.get_attribute("aria-disabled") is None, "Button should not have aria-disabled"
+    assert btn_zite.get_attribute("href") == "https://3gtkwbxbwf.zite.so", f"href mismatch: {btn_zite.get_attribute('href')}"
+    assert btn_zite.get_attribute("target") == "_blank", "Button target must be _blank"
+    assert btn_zite.get_attribute("rel") == "noopener noreferrer", "Button rel must be noopener noreferrer"
+    page.screenshot(path="reference/desktop_13_rsvp_active.png")
+    print("    [PASS] Live configured Zite RSVP URL verified (Confirm Your Attendance, enabled, target=_blank)")
+
+    # 6. Click Handling Test: Verify popup / new tab handling
+    with context.expect_page() as new_page_info:
+        btn_zite.click()
+    new_page = new_page_info.value
+    assert "3gtkwbxbwf.zite.so" in new_page.url or "about:blank" in new_page.url, f"Unexpected target URL: {new_page.url}"
+    new_page.close()
+    print("    [PASS] Clicking button successfully opened published Zite RSVP site in a new tab")
+
+    # 7. Fallback Empty State Test
+    print("  Subtest 5B: Testing fallback when RSVP_URL is empty...")
+    page.evaluate("window.__setRsvpUrlsForTesting('', '')")
+    page.wait_for_timeout(200)
+    assert "RSVP Link Coming Soon" in lbl_zite.text_content(), "Expected 'RSVP Link Coming Soon'"
+    assert "btn-disabled" in btn_zite.get_attribute("class"), "Should have .btn-disabled"
+    assert btn_zite.get_attribute("aria-disabled") == "true", "Should have aria-disabled='true'"
+    print("    [PASS] Fallback empty state works properly")
+
+    # 8. Editor URL Blocking Test
+    print("  Subtest 5C: Testing that Zite editor URL is rejected and blocked...")
+    editor_url = "https://app.zite.com/editor/oinyLbhrWgus/edit/gXFa"
+    page.evaluate(f"window.__setRsvpUrlsForTesting('{editor_url}', '')")
+    page.wait_for_timeout(200)
+    assert "RSVP Link Coming Soon" in lbl_zite.text_content(), "Editor URL should NOT activate the button"
+    assert "btn-disabled" in btn_zite.get_attribute("class"), "Editor URL must keep button disabled"
+    print("    [PASS] Editor URL successfully blocked and kept disabled")
+
+    # 9. Restore Live State
+    page.evaluate("window.__setRsvpUrlsForTesting('https://3gtkwbxbwf.zite.so', '')")
+    page.wait_for_timeout(200)
+    assert "Confirm Your Attendance" in lbl_zite.text_content(), "Restore failed"
+    assert "btn-disabled" not in btn_zite.get_attribute("class"), "Restore failed"
+    print("    [PASS] Restored live Zite RSVP state")
+
     # Check dividers
     dividers_count = page.locator(".royal-floral-divider").count()
-    assert dividers_count >= 9, f"Expected at least 9 gold floral dividers, got {dividers_count}"
-    print(f"  [PASS] {dividers_count} Gold Floral Dividers verified")
+    assert dividers_count >= 10, f"Expected at least 10 gold floral dividers, got {dividers_count}"
+    print(f"  [PASS] {dividers_count} Gold Floral Dividers verified across entire page")
 
     # =========================================================================
     # 2. MOBILE TEST (iPhone 14 Viewport 390x844)
@@ -260,6 +345,19 @@ with sync_playwright() as p:
     mpage.screenshot(path="reference/mobile_12_reminders.png")
     print("  [PASS] Mobile Important Reminders verified")
 
+    # Scroll to RSVP Section on Mobile
+    mrsvp = mpage.locator("#rsvpSection")
+    mrsvp.scroll_into_view_if_needed()
+    mpage.wait_for_timeout(600)
+    assert mpage.is_visible("#rsvpSection .rsvp-title"), "Mobile RSVP title missing"
+    assert mpage.is_visible("#btnZiteRsvp"), "Mobile Zite RSVP button missing"
+
+    # Verify touch target height >= 48px
+    btn_box = mpage.locator("#btnZiteRsvp").bounding_box()
+    assert btn_box['height'] >= 48, f"Mobile RSVP button height {btn_box['height']}px is less than 48px touch target!"
+    print(f"  [PASS] Mobile button touch height verified: {btn_box['height']}px (>= 48px)")
+    mpage.screenshot(path="reference/mobile_13_rsvp.png")
+
     # Check for horizontal scrollbars / overflow in mobile
     has_horizontal_overflow = mpage.evaluate("() => document.documentElement.scrollWidth > window.innerWidth")
     assert not has_horizontal_overflow, "Mobile page has horizontal overflow!"
@@ -282,7 +380,12 @@ with sync_playwright() as p:
     tpage.locator("#remindersSection").scroll_into_view_if_needed()
     tpage.wait_for_timeout(500)
     tpage.screenshot(path="reference/tablet_04_gift_and_reminders.png")
-    print("  [PASS] Tablet view verified for Phase 4")
+    
+    tpage.locator("#rsvpSection").scroll_into_view_if_needed()
+    tpage.wait_for_timeout(500)
+    assert tpage.is_visible("#rsvpSection"), "Tablet RSVP section missing"
+    tpage.screenshot(path="reference/tablet_05_rsvp.png")
+    print("  [PASS] Tablet view verified for Phase 4 & Phase 5 RSVP")
 
     # =========================================================================
     # 4. ACCESSIBILITY & REDUCED MOTION VERIFICATION
@@ -296,11 +399,12 @@ with sync_playwright() as p:
     assert rm_page.is_visible("#attireSection"), "Reduced motion Attire section failed"
     assert rm_page.is_visible("#giftGuideSection"), "Reduced motion Gift Guide failed"
     assert rm_page.is_visible("#remindersSection"), "Reduced motion Reminders failed"
+    assert rm_page.is_visible("#rsvpSection"), "Reduced motion RSVP section failed"
     print("  [PASS] Reduced motion mode verified")
 
     browser.close()
     httpd.shutdown()
 
 print("\n=======================================================")
-print("ALL PHASE 1, PHASE 2, PHASE 3 & PHASE 4 TESTS COMPLETED & PASSED SUCCESSFULLY!")
+print("ALL PHASE 1, 2, 3, 4 & 5 TESTS COMPLETED & PASSED SUCCESSFULLY!")
 print("=======================================================")
