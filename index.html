@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Jennina's 18th Birthday Debut Royal Invitation - A Decade and Eight. An enchanted royal celebration in emerald green, gold, and cream.">
+  <meta name="theme-color" content="#02382E">
+  <title>Jennina Turns 18 • Royal Debut Invitation</title>
+  
+  <!-- Web & Local Font Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  
+  <!-- Main Luxury Invitation Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Preload Key Phase 2 Royal Assets -->
+  <link rel="preload" as="image" href="assets/decorations/royal-emerald-frame.png">
+  <link rel="preload" as="image" href="assets/decorations/emerald-roses-corners.png">
+  <link rel="preload" as="image" href="assets/decorations/royal-venue-arch.jpg">
+</head>
+<body class="royal-stage">
+  
+  <!-- Accessibility Live Region for Screen Readers -->
+  <div id="srAnnounce" class="sr-only" aria-live="polite">Jennina's Royal Invitation is ready to open.</div>
+
+  <!-- Ambient Velvet Backdrop & Sparkling Canvas -->
+  <div class="royal-backdrop" aria-hidden="true"></div>
+  <canvas id="sparkleCanvas" class="sparkle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Hanging Antique Gold Lanterns -->
+  <aside class="hanging-lantern lantern-left" aria-hidden="true">
+    <div class="lantern-chain"></div>
+    <div class="lantern-body-wrap">
+      <img src="assets/decorations/gold-lantern.png" alt="" class="lantern-img" loading="eager">
+      <div class="lantern-glow"></div>
+    </div>
+  </aside>
+
+  <aside class="hanging-lantern lantern-right" aria-hidden="true">
+    <div class="lantern-chain"></div>
+    <div class="lantern-body-wrap">
+      <img src="assets/decorations/gold-lantern.png" alt="" class="lantern-img" loading="eager">
+      <div class="lantern-glow"></div>
+    </div>
+  </aside>
+
+  <!-- Royal Velvet Curtains & Draped Valance -->
+  <div class="curtain-theatre" aria-hidden="true">
+    <div class="curtain-valance">
+      <div class="valance-swag swag-1"></div>
+      <div class="valance-swag swag-2"></div>
+      <div class="valance-swag swag-3"></div>
+      <div class="valance-trim"></div>
+    </div>
+    <div class="curtain-panel curtain-left" id="curtainLeft">
+      <div class="curtain-folds"></div>
+      <div class="curtain-gold-trim"></div>
+      <div class="curtain-tassel"></div>
+    </div>
+    <div class="curtain-panel curtain-right" id="curtainRight">
+      <div class="curtain-folds"></div>
+      <div class="curtain-gold-trim"></div>
+      <div class="curtain-tassel"></div>
+    </div>
+  </div>
+
+  <!-- Main Interactive Experience Wrapper -->
+  <main class="invitation-app" id="invitationApp">
+    
+    <!-- ==============================================
+         PHASE 1 TASK 3, 4, 5: ROYAL SCROLL OPENING
+         ============================================== -->
+    <section class="scroll-opening-scene" id="openingScene" aria-label="Royal Invitation Opening">
+      
+      <!-- Top Royal Crest & Invitation Heading -->
+      <header class="opening-header">
+        <div class="royal-crown-badge">
+          <img src="assets/decorations/royal-crown.png" alt="Royal Crown Crest" class="opening-crown-img">
+        </div>
+        <div class="heading-ornament-wrap">
+          <span class="gold-flourish" aria-hidden="true">❦</span>
+          <h1 class="invitation-heading">You Are Invited</h1>
+          <span class="gold-flourish" aria-hidden="true">❦</span>
+        </div>
+        <p class="opening-subtitle">Enchanted Garden • Royal Debut Celebration</p>
+      </header>
+
+      <!-- Royal Emerald Green Scroll Button -->
+      <div class="scroll-interaction-zone">
+        <button type="button" 
+                class="emerald-scroll-btn" 
+                id="scrollTrigger"
+                aria-label="Tap the scroll to open Jennina's 18th Birthday invitation"
+                aria-expanded="false"
+                tabindex="0">
+          
+          <!-- Top Baroque Gold Roller -->
+          <div class="scroll-rod rod-top" aria-hidden="true">
+            <div class="finial finial-left"></div>
+            <div class="rod-bar"></div>
+            <div class="finial finial-right"></div>
+          </div>
+
+          <!-- Emerald Velvet Scroll Body -->
+          <div class="scroll-body-outer">
+            <div class="scroll-body-inner">
+              
+              <!-- Ornate Gold Filigree Borders -->
+              <div class="scroll-gold-frame" aria-hidden="true"></div>
+              <div class="filigree-corner tl" aria-hidden="true"></div>
+              <div class="filigree-corner tr" aria-hidden="true"></div>
+              <div class="filigree-corner bl" aria-hidden="true"></div>
+              <div class="filigree-corner br" aria-hidden="true"></div>
+
+              <!-- Embroidered Gold & Emerald Ribbon -->
+              <div class="scroll-ribbon-sash" aria-hidden="true">
+                <div class="sash-gold-trim top"></div>
+                <div class="sash-title">ROYAL INVITATION</div>
+                <div class="sash-gold-trim bottom"></div>
+              </div>
+
+              <!-- 3D Royal Gold Wax Seal with Monogram -->
+              <div class="wax-seal-wrapper">
+                <div class="wax-seal-halo" aria-hidden="true"></div>
+                <div class="wax-seal" aria-hidden="true">
+                  <div class="wax-rim">
+                    <div class="wax-face">
+                      <span class="monogram-letter">J</span>
+                      <span class="monogram-stars">✦ 18 ✦</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Golden Ribbon Tails with Tassels -->
+                <div class="ribbon-tails" aria-hidden="true">
+                  <div class="ribbon-tail tail-left"></div>
+                  <div class="ribbon-tail tail-right"></div>
+                </div>
+              </div>
+
+              <!-- Celebrant Teaser -->
+              <div class="scroll-teaser" aria-hidden="true">
+                <span class="teaser-intro">Honoring</span>
+                <span class="teaser-celebrant">Jennina</span>
+                <span class="teaser-age">Turning 18</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Baroque Gold Roller -->
+          <div class="scroll-rod rod-bottom" aria-hidden="true">
+            <div class="finial finial-left"></div>
+            <div class="rod-bar"></div>
+            <div class="finial finial-right"></div>
+          </div>
+
+        </button>
+
+        <!-- Tap Instruction Prompt -->
+        <div class="tap-prompt-container" id="tapPrompt">
+          <div class="tap-icon-pulse" aria-hidden="true">
+            <svg class="tap-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/>
+              <circle cx="12" cy="12" r="3.5" fill="#D4AF37"/>
+            </svg>
+          </div>
+          <span class="tap-prompt-label">Tap the Scroll to Open</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==============================================
+         PHASE 1 TASK 7 & 8: REVEALED ROYAL INVITATION
+         (Faithful recreation inspired by Page 1 of PDF)
+         ============================================== -->
+    <section class="revealed-invitation-scene" id="revealedScene" aria-label="Jennina's 18th Birthday Invitation" aria-hidden="true">
+      
+      <!-- Top Action Bar (Replay / Roll Up Scroll) -->
+      <nav class="invitation-nav-bar">
+        <button type="button" class="btn-royal-replay" id="btnReplay" aria-label="Roll up the scroll and replay opening">
+          <span class="replay-glyph" aria-hidden="true">↺</span>
+          <span class="replay-label">Roll Up Scroll</span>
+        </button>
+      </nav>
+
+      <!-- Golden Framed Royal Invitation Card -->
+      <article class="royal-invitation-card" id="invitationCard">
+        
+        <!-- Top Floral Swag (From PDF Page 1) - Outer Arch Garland -->
+        <div class="card-floral-swag swag-top" aria-hidden="true">
+          <img src="assets/decorations/floral-swag.png" alt="" class="floral-swag-img">
+        </div>
+
+        <!-- Bottom Floral Swag (From PDF Page 1) - Outer Base Garland -->
+        <div class="card-floral-swag swag-bottom" aria-hidden="true">
+          <img src="assets/decorations/floral-swag.png" alt="" class="floral-swag-img flip-swag">
+        </div>
+
+        <!-- Authentic Golden Baroque Arch Frame (Page 1 Reference) -->
+        <div class="card-baroque-frame" aria-hidden="true">
+          <img src="assets/decorations/gold-baroque-frame.png" alt="" class="baroque-frame-img">
+        </div>
+
+        <!-- 3D Fluttering Golden Emerald Butterfly -->
+        <div class="card-butterfly" aria-hidden="true">
+          <div class="butterfly-flight">
+            <div class="butterfly-wing left-wing"></div>
+            <div class="butterfly-body"></div>
+            <div class="butterfly-wing right-wing"></div>
+          </div>
+        </div>
+
+        <!-- Inner Parchment Card Surface (Contains All Readable Content) -->
+        <div class="card-parchment-body">
+          <div class="parchment-grain" aria-hidden="true"></div>
+          
+          <!-- Inner Gold Filigree Hairline Border -->
+          <div class="card-inner-border" aria-hidden="true">
+            <div class="filigree-corner tl"></div>
+            <div class="filigree-corner tr"></div>
+            <div class="filigree-corner bl"></div>
+            <div class="filigree-corner br"></div>
+          </div>
+
+          <!-- Main Typography & Invitation Details (Always On Top) -->
+          <div class="card-content-stack">
+            
+            <!-- Royal Crown Crest (From PDF Page 2) -->
+            <div class="card-crown-ornament" aria-hidden="true">
+              <img src="assets/decorations/royal-crown.png" alt="" class="crown-img">
+            </div>
+
+            <!-- Task 8: "Celebrate a New Chapter With Us As" -->
+            <p class="invitation-opener">Celebrate a New Chapter With Us As</p>
+
+            <!-- Task 8: "Jennina" -->
+            <div class="celebrant-title-group">
+              <h2 class="celebrant-name" data-celebrant="Jennina">Jennina</h2>
+            </div>
+
+            <!-- Task 8: "Turns 18" -->
+            <div class="milestone-badge-wrap">
+              <span class="ribbon-flourish left" aria-hidden="true">❧</span>
+              <span class="milestone-word">TURNS</span>
+              <span class="milestone-number">18</span>
+              <span class="ribbon-flourish right" aria-hidden="true">❧</span>
+            </div>
+
+            <!-- Task 8: "A Decade and Eight" -->
+            <div class="subtitle-divider-wrap">
+              <span class="gold-line left" aria-hidden="true"></span>
+              <p class="subtitle-text">A Decade and Eight</p>
+              <span class="gold-line right" aria-hidden="true"></span>
+            </div>
+
+            <!-- Emerald Roses Garland Accent (From PDF Page 1) -->
+            <div class="emerald-roses-accent" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses.png" alt="" class="roses-img">
+            </div>
+
+            <!-- Task 8: Date and Time ("February 5, 2027" & "3:00 PM") -->
+            <div class="event-datetime-badge" aria-label="Date: February 5, 2027 at 3:00 PM">
+              <div class="datetime-grid">
+                <div class="datetime-col col-weekday">
+                  <span class="weekday-name">FRIDAY</span>
+                </div>
+                <div class="datetime-col col-date-hero">
+                  <span class="month-name">FEB</span>
+                  <span class="date-number">5</span>
+                </div>
+                <div class="datetime-col col-time">
+                  <span class="time-label">AT 3:00 PM</span>
+                </div>
+              </div>
+              <div class="datetime-year-pill">
+                <span class="year-digits">2027</span>
+              </div>
+              <p class="sr-only">Celebration date: Friday, February 5, 2027 at 3:00 PM</p>
+            </div>
+
+            <!-- Venue Details (From PDF Page 1) -->
+            <footer class="venue-location-wrap">
+              <span class="venue-preposition">AT</span>
+              <p class="venue-name">STALLA SUITES EVENTS PLACE</p>
+              <p class="venue-hall">(PANDORA HALL)</p>
+            </footer>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- ==============================================
+           PHASE 2: SECTION 1 TO 4
+           ============================================== -->
+      
+      <!-- Scroll Down Exploration Cue -->
+      <div class="scroll-explore-cue" aria-hidden="true">
+        <span class="cue-label">Scroll to Explore Celebration Details</span>
+        <span class="cue-arrow">⌄</span>
+      </div>
+
+      <!-- Gold Floral Divider 1 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- SECTION 1: SAVE THE DATE -->
+      <section class="royal-section save-the-date-section" id="saveTheDateSection" aria-label="Save the Date">
+        <div class="section-parchment-card" id="saveTheDateCard">
+          
+          <!-- Outer Baroque Royal Frame (Authentic from Pages 2 & 3 of PDF) -->
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/royal-emerald-frame.png" alt="" class="frame-bg-img">
+          </div>
+
+          <!-- Corner Emerald Roses & Golden Filigree (From PDF Pages 2 & 3) -->
+          <div class="card-roses-decor" aria-hidden="true">
+            <img src="assets/decorations/emerald-roses-corners.png" alt="" class="roses-corner-img">
+          </div>
+
+          <div class="section-card-content save-date-content">
+            <!-- Task Requirement: "Save the Date" -->
+            <h2 class="section-title save-date-title">Save the Date</h2>
+
+            <!-- Task Requirement: "The Special Occasion Will Be Held On" -->
+            <p class="section-lead-text">The Special Occasion Will Be Held On</p>
+
+            <!-- Task Requirement: FEBRUARY 5, 2027 | FRIDAY | 3:00 PM -->
+            <div class="save-date-hero-block" aria-label="Celebration date: February 5, 2027, Friday, 3:00 PM">
+              <div class="save-date-badge">
+                <span class="save-date-full">FEBRUARY 5, 2027</span>
+              </div>
+              <div class="save-date-subrow">
+                <span class="save-date-day">FRIDAY</span>
+                <span class="save-date-dot" aria-hidden="true">✦</span>
+                <span class="save-date-time">3:00 PM</span>
+              </div>
+            </div>
+
+            <p class="save-date-note">Formal Royal Attire • Modern Emerald & Gold Elegance</p>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- SECTION 2: LIVE COUNTDOWN -->
+      <section class="royal-section countdown-section" id="countdownSection" aria-label="Live Countdown">
+        <div class="countdown-container">
+          
+          <header class="section-header">
+            <span class="section-kicker">A Decade and Eight Begins In</span>
+            <h2 class="section-title">Live Countdown</h2>
+            <div class="header-flourish" aria-hidden="true">❧ ❦ ☙</div>
+          </header>
+
+          <!-- Countdown Display Grid (DAYS | HOURS | MINUTES | SECONDS) -->
+          <div class="countdown-widget" id="countdownWidget">
+            <div class="countdown-grid" id="countdownGrid" aria-live="polite">
+              
+              <!-- DAYS -->
+              <div class="countdown-card" id="cardDays">
+                <div class="countdown-card-inner">
+                  <div class="countdown-digit-wrap">
+                    <span class="countdown-digit" id="countDays">00</span>
+                  </div>
+                  <span class="countdown-label">DAYS</span>
+                </div>
+                <div class="card-gold-trim" aria-hidden="true"></div>
+              </div>
+
+              <!-- HOURS -->
+              <div class="countdown-card" id="cardHours">
+                <div class="countdown-card-inner">
+                  <div class="countdown-digit-wrap">
+                    <span class="countdown-digit" id="countHours">00</span>
+                  </div>
+                  <span class="countdown-label">HOURS</span>
+                </div>
+                <div class="card-gold-trim" aria-hidden="true"></div>
+              </div>
+
+              <!-- MINUTES -->
+              <div class="countdown-card" id="cardMinutes">
+                <div class="countdown-card-inner">
+                  <div class="countdown-digit-wrap">
+                    <span class="countdown-digit" id="countMinutes">00</span>
+                  </div>
+                  <span class="countdown-label">MINUTES</span>
+                </div>
+                <div class="card-gold-trim" aria-hidden="true"></div>
+              </div>
+
+              <!-- SECONDS -->
+              <div class="countdown-card" id="cardSeconds">
+                <div class="countdown-card-inner">
+                  <div class="countdown-digit-wrap">
+                    <span class="countdown-digit" id="countSeconds">00</span>
+                  </div>
+                  <span class="countdown-label">SECONDS</span>
+                </div>
+                <div class="card-gold-trim" aria-hidden="true"></div>
+              </div>
+
+            </div>
+
+            <!-- Zero-Reached Message -->
+            <div class="countdown-arrived-message" id="countdownArrived" style="display: none;">
+              <span class="arrived-crown" aria-hidden="true">👑</span>
+              <h3 class="arrived-title">The Royal Celebration Has Arrived!</h3>
+              <p class="arrived-subtitle">Welcome to Jennina's 18th Birthday Debut</p>
+            </div>
+
+            <p class="countdown-target-caption">
+              Target: February 5, 2027 at 3:00 PM • Asia/Manila (UTC+08:00)
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 3 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- SECTION 3: FEBRUARY 2027 CALENDAR -->
+      <section class="royal-section calendar-section" id="calendarSection" aria-label="February 2027 Calendar">
+        <div class="section-parchment-card calendar-card" id="calendarCard">
+          
+          <!-- Outer Baroque Royal Frame -->
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/royal-emerald-frame.png" alt="" class="frame-bg-img">
+          </div>
+
+          <!-- Corner Emerald Roses & Golden Filigree -->
+          <div class="card-roses-decor" aria-hidden="true">
+            <img src="assets/decorations/emerald-roses-corners.png" alt="" class="roses-corner-img">
+          </div>
+
+          <div class="section-card-content calendar-card-content">
+            <header class="calendar-header">
+              <span class="calendar-year-label">2027</span>
+              <h2 class="section-title calendar-month-title">February</h2>
+              <p class="calendar-subtitle">Mark Your Calendar for Jennina's Debut</p>
+            </header>
+
+          <!-- Calendar Table / Grid -->
+          <div class="calendar-grid-wrapper">
+            
+            <!-- Weekday Headers -->
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span class="weekday-cell">SUN</span>
+              <span class="weekday-cell">MON</span>
+              <span class="weekday-cell">TUE</span>
+              <span class="weekday-cell">WED</span>
+              <span class="weekday-cell">THU</span>
+              <span class="weekday-cell fri-highlight">FRI</span>
+              <span class="weekday-cell">SAT</span>
+            </div>
+
+            <!-- Calendar Days Grid (February 2027: starts Monday Feb 1, 28 days total) -->
+            <div class="calendar-days-grid" role="grid" aria-label="February 2027">
+              
+              <!-- Sunday Feb 0 (empty) -->
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              
+              <!-- Row 1: Feb 1 - Feb 6 -->
+              <div class="day-cell" role="gridcell">1</div>
+              <div class="day-cell" role="gridcell">2</div>
+              <div class="day-cell" role="gridcell">3</div>
+              <div class="day-cell" role="gridcell">4</div>
+              
+              <!-- Friday Feb 5: HIGHLIGHTED WITH GOLD HEART & EMERALD GEMSTONE -->
+              <div class="day-cell day-celebration-highlight" role="gridcell" aria-label="Friday, February 5, 2027 - Jennina's 18th Birthday Debut Celebration">
+                <div class="highlight-gem-wrap" aria-hidden="true">
+                  <span class="gold-heart-icon">♥</span>
+                  <span class="emerald-gem-icon">💎</span>
+                </div>
+                <span class="highlight-date-number">5</span>
+                <span class="highlight-badge-tag" aria-hidden="true">DEBUT</span>
+              </div>
+
+              <div class="day-cell" role="gridcell">6</div>
+
+              <!-- Row 2: Feb 7 - Feb 13 -->
+              <div class="day-cell" role="gridcell">7</div>
+              <div class="day-cell" role="gridcell">8</div>
+              <div class="day-cell" role="gridcell">9</div>
+              <div class="day-cell" role="gridcell">10</div>
+              <div class="day-cell" role="gridcell">11</div>
+              <div class="day-cell" role="gridcell">12</div>
+              <div class="day-cell" role="gridcell">13</div>
+
+              <!-- Row 3: Feb 14 - Feb 20 -->
+              <div class="day-cell" role="gridcell">14</div>
+              <div class="day-cell" role="gridcell">15</div>
+              <div class="day-cell" role="gridcell">16</div>
+              <div class="day-cell" role="gridcell">17</div>
+              <div class="day-cell" role="gridcell">18</div>
+              <div class="day-cell" role="gridcell">19</div>
+              <div class="day-cell" role="gridcell">20</div>
+
+              <!-- Row 4: Feb 21 - Feb 27 -->
+              <div class="day-cell" role="gridcell">21</div>
+              <div class="day-cell" role="gridcell">22</div>
+              <div class="day-cell" role="gridcell">23</div>
+              <div class="day-cell" role="gridcell">24</div>
+              <div class="day-cell" role="gridcell">25</div>
+              <div class="day-cell" role="gridcell">26</div>
+              <div class="day-cell" role="gridcell">27</div>
+
+              <!-- Row 5: Feb 28 and trailing empty cells -->
+              <div class="day-cell" role="gridcell">28</div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+              <div class="day-cell day-empty" role="gridcell" aria-disabled="true"></div>
+
+            </div>
+
+          </div>
+
+          <!-- Calendar Footer Caption -->
+          <footer class="calendar-footer-legend">
+            <span class="legend-gem-dot" aria-hidden="true">💎</span>
+            <span class="legend-text">Friday, February 5 • Jennina's 18th Birthday Celebration</span>
+          </footer>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 4 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- SECTION 4: VENUE -->
+      <section class="royal-section venue-section" id="venueSection" aria-label="The Royal Venue">
+        <div class="section-parchment-card venue-card" id="venueCard">
+          
+          <!-- Authentic Royal Venue Arched Frame (From Page 6 of PDF) -->
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/royal-venue-arch.jpg" alt="" class="frame-bg-img venue-arch-img">
+          </div>
+
+          <div class="section-card-content venue-card-content">
+            <header class="venue-header">
+              <!-- Required Heading: "The Royal Venue" -->
+              <h2 class="section-title venue-title">The Royal Venue</h2>
+              <p class="venue-subtitle">Where Moments Turn into Memories</p>
+            </header>
+
+            <div class="venue-details-content">
+              
+              <!-- Required Display: Stalla Suites Events Places & Pandora Hall -->
+              <div class="venue-name-group">
+                <h3 class="venue-primary-name">Stalla Suites Events Places</h3>
+                <p class="venue-hall-name">Pandora Hall</p>
+              </div>
+
+              <div class="venue-divider-ornament" aria-hidden="true">❦</div>
+
+              <!-- Required Display Address -->
+              <div class="venue-address-block">
+                <span class="address-label">ADDRESS</span>
+                <address class="venue-full-address">
+                  1008 Quezon Avenue, Paligsahan,<br>
+                  Diliman, Quezon City, 1003 Metro Manila
+                </address>
+              </div>
+
+              <!-- Required Display Landmark -->
+              <div class="venue-landmark-block">
+                <span class="landmark-badge">LANDMARK</span>
+                <p class="venue-landmark-text">
+                  Beside Classique Bar & Spa, in front of Fisher Mall.
+                </p>
+              </div>
+
+              <!-- Action: View Location Button -->
+              <div class="venue-action-row">
+                <a href="https://www.google.com/maps/search/?api=1&query=Stalla+Suites+Events+Place+1008+Quezon+Avenue+Paligsahan+Diliman+Quezon+City" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-royal-location"
+                   id="btnViewLocation"
+                   aria-label="View location of Stalla Suites Events Places on Google Maps">
+                  <span class="location-pin-icon" aria-hidden="true">📍</span>
+                  <span class="btn-text">View Location</span>
+                  <span class="btn-external-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <!-- Verified QR Code Destination from Reference PDF Page 6 -->
+              <div class="venue-qr-wrapper">
+                <div class="qr-gold-frame">
+                  <img src="assets/decorations/qr-code-maps.png" alt="QR Code linking to Stalla Suites on Google Maps" class="venue-qr-img">
+                </div>
+                <p class="qr-caption">Scan with phone camera to open in Google Maps</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 5 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 3: SECTION 1 — 18 ROSES + 18 CANDLES & GIFTS
+           Primary Reference: Page 2 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section traditions-section" id="traditionsSection1" aria-label="18 Roses and 18 Candles & Gifts">
+        
+        <!-- Enchanted Floating Golden Butterflies -->
+        <div class="butterfly-flight-layer" aria-hidden="true">
+          <img src="assets/decorations/gold-butterfly.png" alt="" class="floating-butterfly bf-1">
+          <img src="assets/decorations/gold-butterfly.png" alt="" class="floating-butterfly bf-2">
+        </div>
+
+        <header class="traditions-main-header">
+          <div class="traditions-crown-crest">
+            <img src="assets/decorations/royal-crown.png" alt="Royal Crown" class="crown-icon-img">
+          </div>
+          <h2 class="section-title traditions-title">The Royal Program • Part I</h2>
+          <p class="traditions-main-subtitle">Court of Honor &amp; Guiding Lights</p>
+          <div class="traditions-ornament" aria-hidden="true">❦</div>
+        </header>
+
+        <!-- Accessible Mobile Tab Navigation (<= 767px) -->
+        <div class="entourage-tabs-nav" role="tablist" aria-label="Select Part I tradition">
+          <button type="button" 
+                  role="tab" 
+                  class="entourage-tab-btn active" 
+                  id="tabRoses" 
+                  aria-selected="true" 
+                  aria-controls="panelRoses"
+                  tabindex="0">
+            <span class="tab-icon" aria-hidden="true">🌹</span>
+            <span class="tab-label">18 Roses</span>
+            <span class="tab-count-badge">18</span>
+          </button>
+          <button type="button" 
+                  role="tab" 
+                  class="entourage-tab-btn" 
+                  id="tabCandles" 
+                  aria-selected="false" 
+                  aria-controls="panelCandles"
+                  tabindex="-1">
+            <span class="tab-icon" aria-hidden="true">🕯️</span>
+            <span class="tab-label">18 Candles &amp; Gifts</span>
+            <span class="tab-count-badge">18</span>
+          </button>
+        </div>
+
+        <!-- Dual Side-by-Side Panels Grid -->
+        <div class="traditions-dual-grid">
+          
+          <!-- LEFT PANEL: 18 ROSES -->
+          <article class="tradition-panel-card panel-active" id="panelRoses" role="tabpanel" aria-labelledby="tabRoses">
+            
+            <!-- Authentic PDF Pages 2 & 3 Baroque Frame & Corner Roses Background -->
+            <div class="card-frame-bg" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+            </div>
+
+            <!-- Antique Hanging Lantern Accent -->
+            <div class="panel-lantern-accent" aria-hidden="true">
+              <img src="assets/decorations/gold-lantern.png" alt="" class="panel-lantern-img">
+              <div class="panel-lantern-glow"></div>
+            </div>
+
+            <div class="tradition-panel-content">
+              <header class="panel-header">
+                <div class="panel-crown-badge">
+                  <img src="assets/decorations/royal-crown.png" alt="" class="panel-crown-img">
+                </div>
+                <h3 class="panel-title">18 Roses</h3>
+                <p class="panel-tagline">The First Dance &amp; Guiding Gentlemen</p>
+                <div class="panel-filigree-divider" aria-hidden="true">
+                  <span class="pfd-flourish">❧</span>
+                  <span class="pfd-gem">❦</span>
+                  <span class="pfd-flourish">☙</span>
+                </div>
+              </header>
+
+              <!-- Dynamic 18 Roses List -->
+              <ol class="entourage-list" id="listRoses" aria-label="18 Roses Honorees">
+                <!-- Dynamically populated by JS -->
+              </ol>
+            </div>
+          </article>
+
+          <!-- RIGHT PANEL: 18 CANDLES & GIFTS -->
+          <article class="tradition-panel-card" id="panelCandles" role="tabpanel" aria-labelledby="tabCandles">
+            
+            <div class="card-frame-bg" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+            </div>
+
+            <div class="panel-lantern-accent" aria-hidden="true">
+              <img src="assets/decorations/gold-lantern.png" alt="" class="panel-lantern-img">
+              <div class="panel-lantern-glow"></div>
+            </div>
+
+            <div class="tradition-panel-content">
+              <header class="panel-header">
+                <div class="panel-crown-badge">
+                  <img src="assets/decorations/royal-crown.png" alt="" class="panel-crown-img">
+                </div>
+                <h3 class="panel-title">18 Candles &amp; Gifts</h3>
+                <p class="panel-tagline">The Guiding Lights &amp; Warm Wishes</p>
+                <div class="panel-filigree-divider" aria-hidden="true">
+                  <span class="pfd-flourish">❧</span>
+                  <span class="pfd-gem">❦</span>
+                  <span class="pfd-flourish">☙</span>
+                </div>
+              </header>
+
+              <!-- Dynamic 18 Candles & Gifts List -->
+              <ol class="entourage-list" id="listCandles" aria-label="18 Candles and Gifts Honorees">
+                <!-- Dynamically populated by JS -->
+              </ol>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 6 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 3: SECTION 2 — 18 BLUE BILLS + 18 SHOTS
+           Primary Reference: Page 3 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section traditions-section" id="traditionsSection2" aria-label="18 Blue Bills and 18 Shots">
+        
+        <!-- Enchanted Floating Golden Butterflies -->
+        <div class="butterfly-flight-layer" aria-hidden="true">
+          <img src="assets/decorations/gold-butterfly.png" alt="" class="floating-butterfly bf-3">
+          <img src="assets/decorations/gold-butterfly.png" alt="" class="floating-butterfly bf-4">
+        </div>
+
+        <header class="traditions-main-header">
+          <div class="traditions-crown-crest">
+            <img src="assets/decorations/royal-crown.png" alt="Royal Crown" class="crown-icon-img">
+          </div>
+          <h2 class="section-title traditions-title">The Royal Program • Part II</h2>
+          <p class="traditions-main-subtitle">Prosperity &amp; Celebratory Toasts</p>
+          <div class="traditions-ornament" aria-hidden="true">❦</div>
+        </header>
+
+        <!-- Accessible Mobile Tab Navigation (<= 767px) -->
+        <div class="entourage-tabs-nav" role="tablist" aria-label="Select Part II tradition">
+          <button type="button" 
+                  role="tab" 
+                  class="entourage-tab-btn active" 
+                  id="tabBlueBills" 
+                  aria-selected="true" 
+                  aria-controls="panelBlueBills"
+                  tabindex="0">
+            <span class="tab-icon" aria-hidden="true">💵</span>
+            <span class="tab-label">18 Blue Bills</span>
+            <span class="tab-count-badge">18</span>
+          </button>
+          <button type="button" 
+                  role="tab" 
+                  class="entourage-tab-btn" 
+                  id="tabShots" 
+                  aria-selected="false" 
+                  aria-controls="panelShots"
+                  tabindex="-1">
+            <span class="tab-icon" aria-hidden="true">🥂</span>
+            <span class="tab-label">18 Shots</span>
+            <span class="tab-count-badge">18</span>
+          </button>
+        </div>
+
+        <!-- Dual Side-by-Side Panels Grid -->
+        <div class="traditions-dual-grid">
+          
+          <!-- LEFT PANEL: 18 BLUE BILLS -->
+          <article class="tradition-panel-card panel-active" id="panelBlueBills" role="tabpanel" aria-labelledby="tabBlueBills">
+            
+            <div class="card-frame-bg" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+            </div>
+
+            <div class="panel-lantern-accent" aria-hidden="true">
+              <img src="assets/decorations/gold-lantern.png" alt="" class="panel-lantern-img">
+              <div class="panel-lantern-glow"></div>
+            </div>
+
+            <div class="tradition-panel-content">
+              <header class="panel-header">
+                <div class="panel-crown-badge">
+                  <img src="assets/decorations/royal-crown.png" alt="" class="panel-crown-img">
+                </div>
+                <h3 class="panel-title">18 Blue Bills</h3>
+                <p class="panel-tagline">Prosperity &amp; Future Horizons</p>
+                <div class="panel-filigree-divider" aria-hidden="true">
+                  <span class="pfd-flourish">❧</span>
+                  <span class="pfd-gem">❦</span>
+                  <span class="pfd-flourish">☙</span>
+                </div>
+              </header>
+
+              <!-- Dynamic 18 Blue Bills List -->
+              <ol class="entourage-list" id="listBlueBills" aria-label="18 Blue Bills Honorees">
+                <!-- Dynamically populated by JS -->
+              </ol>
+            </div>
+          </article>
+
+          <!-- RIGHT PANEL: 18 SHOTS -->
+          <article class="tradition-panel-card" id="panelShots" role="tabpanel" aria-labelledby="tabShots">
+            
+            <div class="card-frame-bg" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+            </div>
+
+            <div class="panel-lantern-accent" aria-hidden="true">
+              <img src="assets/decorations/gold-lantern.png" alt="" class="panel-lantern-img">
+              <div class="panel-lantern-glow"></div>
+            </div>
+
+            <div class="tradition-panel-content">
+              <header class="panel-header">
+                <div class="panel-crown-badge">
+                  <img src="assets/decorations/royal-crown.png" alt="" class="panel-crown-img">
+                </div>
+                <h3 class="panel-title">18 Shots</h3>
+                <p class="panel-tagline">Celebratory Cheers &amp; Lasting Bonds</p>
+                <div class="panel-filigree-divider" aria-hidden="true">
+                  <span class="pfd-flourish">❧</span>
+                  <span class="pfd-gem">❦</span>
+                  <span class="pfd-flourish">☙</span>
+                </div>
+              </header>
+
+              <!-- Dynamic 18 Shots List -->
+              <ol class="entourage-list" id="listShots" aria-label="18 Shots Honorees">
+                <!-- Dynamically populated by JS -->
+              </ol>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 7 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 4: SECTION 1 — ROYAL ATTIRE
+           Primary Reference: Pages 4 & 5 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section attire-section" id="attireSection" aria-label="Royal Attire and Dress Code">
+        
+        <!-- Royal Curtained Attire Container -->
+        <div class="attire-scroll-container">
+          
+          <!-- Surrounding Emerald Green Velvet Curtains & Gold Tassels -->
+          <div class="attire-side-curtain curtain-left" aria-hidden="true">
+            <div class="side-curtain-folds"></div>
+            <div class="side-curtain-trim"></div>
+            <div class="side-curtain-tassel"></div>
+          </div>
+          <div class="attire-side-curtain curtain-right" aria-hidden="true">
+            <div class="side-curtain-folds"></div>
+            <div class="side-curtain-trim"></div>
+            <div class="side-curtain-tassel"></div>
+          </div>
+
+          <!-- Luxurious Cream Parchment Scroll Body -->
+          <div class="section-parchment-card attire-card" id="attireCard">
+            
+            <!-- Authentic PDF Pages 4 & 5 Corner Roses Background -->
+            <div class="card-frame-bg" aria-hidden="true">
+              <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+            </div>
+
+            <div class="section-card-content attire-card-content">
+              
+              <!-- Royal Attire Header -->
+              <header class="attire-header">
+                <div class="attire-crown-badge">
+                  <img src="assets/decorations/royal-crown.png" alt="Royal Crown with Emerald Gemstones" class="attire-crown-img">
+                </div>
+                <!-- Required Heading: "Attire" -->
+                <h2 class="section-title attire-title">Attire</h2>
+                <!-- Required Description -->
+                <p class="attire-description">
+                  We highly encourage our guests to dress in their finest modern royal attire, complementing the celebration's elegant theme.
+                </p>
+                <div class="attire-divider-ornament" aria-hidden="true">
+                  <span class="ado-flourish">❧</span>
+                  <span class="ado-gem">❦</span>
+                  <span class="ado-flourish">☙</span>
+                </div>
+              </header>
+
+              <!-- PART A: FOR THE 18TH ROSES -->
+              <div class="attire-subpart attire-part-roses" id="attirePartRoses">
+                <div class="subpart-header">
+                  <span class="subpart-badge-icon" aria-hidden="true">🌹</span>
+                  <h3 class="subpart-title">For the 18th Roses</h3>
+                  <span class="subpart-tagline">Formal Men's Royal Attire Inspiration</span>
+                </div>
+
+                <!-- Swatches Group -->
+                <div class="swatches-group">
+                  <span class="swatches-label">SUGGESTED COLOR PALETTE</span>
+                  <div class="swatches-row" id="swatchesRoses" role="list" aria-label="Color swatches for 18th Roses">
+                    <!-- Dynamically populated from JS -->
+                  </div>
+                </div>
+
+                <!-- Outfit Gallery Grid: 5 Framed Suits -->
+                <div class="attire-gallery-grid" id="galleryRoses" aria-label="Attire inspiration for 18th Roses">
+                  <!-- Dynamically populated from JS -->
+                </div>
+              </div>
+
+              <!-- Internal Divider -->
+              <div class="attire-inter-divider" aria-hidden="true">
+                <span class="aid-line"></span>
+                <span class="aid-flourish">❦</span>
+                <span class="aid-line"></span>
+              </div>
+
+              <!-- PART B: FOR THE GUESTS -->
+              <div class="attire-subpart attire-part-guests" id="attirePartGuests">
+                <div class="subpart-header">
+                  <span class="subpart-badge-icon" aria-hidden="true">👑</span>
+                  <h3 class="subpart-title">For the Guests</h3>
+                  <span class="subpart-tagline">Women's Elegant Modern Royal Formalwear &amp; Gowns</span>
+                </div>
+
+                <!-- Swatches Group -->
+                <div class="swatches-group">
+                  <span class="swatches-label">SUGGESTED COLOR PALETTE</span>
+                  <div class="swatches-row" id="swatchesGuests" role="list" aria-label="Color swatches for Guests">
+                    <!-- Dynamically populated from JS -->
+                  </div>
+                </div>
+
+                <!-- Outfit Gallery Grid: 6 Framed Gowns -->
+                <div class="attire-gallery-grid" id="galleryGuests" aria-label="Attire inspiration for Guests">
+                  <!-- Dynamically populated from JS -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Gold Floral Divider 8 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 4: SECTION 2 — GIFT GUIDE
+           Primary Reference: Page 5 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section gift-guide-section" id="giftGuideSection" aria-label="Gift Guide">
+        <div class="section-parchment-card gift-guide-card" id="giftGuideCard">
+          
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+          </div>
+
+          <div class="section-card-content gift-guide-content">
+            
+            <!-- Subtle Golden Gift Box Illustration / Crest -->
+            <div class="gift-crest-badge" aria-hidden="true">
+              <div class="gift-aura-glow"></div>
+              <span class="gift-symbol">🎁</span>
+            </div>
+
+            <header class="gift-header">
+              <!-- Required Heading: "Gift Guide" -->
+              <h2 class="section-title gift-title">Gift Guide</h2>
+              <div class="gift-divider-ornament" aria-hidden="true">❧ ❦ ☙</div>
+            </header>
+
+            <div class="gift-message-box">
+              <!-- Required Display Text -->
+              <blockquote class="gift-guide-text">
+                "Your presence is already a precious gift. Should you wish to give something more, the celebrant would sincerely appreciate any gifts."
+              </blockquote>
+              <div class="gift-appreciation-flourish" aria-hidden="true">
+                <span class="flourish-star">✦</span>
+                <span class="flourish-text">With Sincere Gratitude &amp; Love</span>
+                <span class="flourish-star">✦</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 9 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- ====================================================================
+           PHASE 4: SECTION 3 — IMPORTANT REMINDERS
+           Primary Reference: Page 6 of DEBUT INVITATION.pdf
+           ==================================================================== -->
+      <section class="royal-section reminders-section" id="remindersSection" aria-label="Important Reminders">
+        <div class="section-parchment-card reminders-card" id="remindersCard">
+          
+          <div class="card-frame-bg" aria-hidden="true">
+            <img src="assets/decorations/emerald-roses-corners.png" alt="" class="card-roses-decor">
+          </div>
+
+          <div class="section-card-content reminders-content">
+            
+            <div class="reminders-crown-badge" aria-hidden="true">
+              <img src="assets/decorations/royal-crown.png" alt="" class="reminders-crown-img">
+            </div>
+
+            <header class="reminders-header">
+              <!-- Required Heading: "Important Reminders" -->
+              <h2 class="section-title reminders-title">Important Reminders</h2>
+              <div class="reminders-divider-ornament" aria-hidden="true">❧ ❦ ☙</div>
+            </header>
+
+            <!-- Required Display Text -->
+            <p class="reminders-main-text">
+              Kindly arrive on time before the program starts. We also request everyone to follow the dress code and bring your warmest smiles to make the celebration more special.
+            </p>
+
+            <!-- Royal Reminder Triad Cards -->
+            <div class="reminders-triad-grid">
+              
+              <div class="reminder-card-item">
+                <div class="triad-icon-wrap" aria-hidden="true">⏳</div>
+                <h4 class="triad-item-title">Punctuality</h4>
+                <p class="triad-item-desc">Kindly arrive before 3:00 PM for registration &amp; seating.</p>
+              </div>
+
+              <div class="reminder-card-item">
+                <div class="triad-icon-wrap" aria-hidden="true">👗</div>
+                <h4 class="triad-item-title">Royal Dress Code</h4>
+                <p class="triad-item-desc">Dress in your finest modern royal formalwear &amp; palette.</p>
+              </div>
+
+              <div class="reminder-card-item">
+                <div class="triad-icon-wrap" aria-hidden="true">✨</div>
+                <h4 class="triad-item-title">Warmest Smiles</h4>
+                <p class="triad-item-desc">Bring your joyous presence to celebrate Jennina's milestone.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Gold Floral Divider 10 -->
+      <div class="royal-floral-divider" aria-hidden="true">
+        <span class="divider-line left"></span>
+        <span class="divider-flourish">❧ ❦ ☙</span>
+        <span class="divider-line right"></span>
+      </div>
+
+      <!-- Royal Celebration Footer -->
+      <footer class="royal-page-footer">
+        <div class="footer-crest" aria-hidden="true">
+          <img src="assets/decorations/royal-crown.png" alt="" class="footer-crown-img">
+        </div>
+        <p class="footer-monogram">JENNINA • A DECADE AND EIGHT</p>
+        <p class="footer-tagline">February 5, 2027 • An Enchanted Royal Debut</p>
+      </footer>
+
+    </section>
+
+  </main>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
