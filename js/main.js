@@ -472,7 +472,7 @@
         'Regen Sansolis',
         'Zara Sangalan',
         'Janine Retoma',
-        'Wilynn Sual',
+        'Wilynne Sual',
         'Raymund Nava',
         'Armina Buendicho',
         'Ronnie Cabanting',
