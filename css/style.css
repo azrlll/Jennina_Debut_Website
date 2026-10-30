@@ -871,414 +871,150 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 /* --------------------------------------------------------------------------
-   11. THE ROYAL GOLDEN FRAME INVITATION CARD (PDF PAGE 1 RECREATION)
+   11. OFFICIAL ROYAL INVITATION CARD (FROM PDF PAGE 1, YEAR CORRECTED TO 2027)
    -------------------------------------------------------------------------- */
-.royal-invitation-card {
+.royal-official-invitation-section {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  min-height: clamp(660px, 86vh, 830px);
-  margin: 45px auto 35px auto;
-  border-radius: 12px;
-  box-shadow: var(--shadow-card);
+  max-width: 580px;
+  margin: 32px auto 36px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
 
-/* Luxurious Golden Baroque Frame (Surrounds and Frames Parchment) */
-.card-baroque-frame {
-  position: absolute;
-  inset: -10px -14px;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.baroque-frame-img {
+.official-invitation-container {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: fill;
-  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
-}
-
-/* Floral Swags at Top and Bottom (Outer Background Crest & Base) */
-.card-floral-swag {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: clamp(320px, 92%, 460px);
-  z-index: 2;
-  pointer-events: none;
-  animation: floralBreathe 6s ease-in-out infinite alternate;
-}
-
-.card-floral-swag.swag-top {
-  top: -48px;
-  max-height: 80px;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 
+    0 16px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(212, 175, 55, 0.25),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.35);
+  cursor: pointer;
+  background: #031e16;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+  outline: none;
 }
 
-.card-floral-swag.swag-bottom {
-  bottom: -48px;
-  max-height: 80px;
-  overflow: hidden;
+.official-invitation-container:hover,
+.official-invitation-container:focus-visible {
+  transform: translateY(-4px) scale(1.006);
+  box-shadow: 
+    0 24px 55px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(212, 175, 55, 0.45),
+    inset 0 0 0 1.5px rgba(212, 175, 55, 0.6);
 }
 
-.floral-swag-img {
+.official-invitation-image {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.7));
+  transition: opacity 0.5s ease;
 }
 
-.flip-swag {
-  transform: scaleY(-1);
-}
-
-@keyframes floralBreathe {
-  0% { transform: translateX(-50%) scale(1); }
-  100% { transform: translateX(-50%) scale(1.025); }
-}
-
-/* 3D Fluttering Golden Emerald Butterfly (Margin Perch) */
-.card-butterfly {
+.invitation-tap-hint {
   position: absolute;
-  top: 14%;
-  right: clamp(-6px, -1.5vw, 10px);
-  z-index: 35;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 16px;
+  background: rgba(3, 30, 22, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 20px;
+  color: #f7ecd5;
+  font-family: var(--font-serif);
+  font-size: clamp(0.72rem, 1.6vw, 0.82rem);
+  letter-spacing: 0.05em;
   pointer-events: none;
-  animation: butterflyFloat 8s ease-in-out infinite alternate;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0.88;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.butterfly-flight {
+.official-invitation-container:hover .invitation-tap-hint,
+.official-invitation-container:focus-visible .invitation-tap-hint {
+  opacity: 1;
+  background: rgba(3, 30, 22, 0.96);
+  border-color: rgba(212, 175, 55, 0.85);
+}
+
+/* Lightbox Modal for Fullscreen Official Invitation */
+.invitation-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
   display: flex;
   align-items: center;
-  transform-style: preserve-3d;
-  perspective: 400px;
-}
-
-.butterfly-wing {
-  width: 24px;
-  height: 28px;
-  background: radial-gradient(ellipse at center, #FBE6A3 0%, #D4AF37 55%, #064E3B 100%);
-  border-radius: 70% 30% 60% 40%;
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
-  opacity: 0.92;
-}
-
-.butterfly-wing.left-wing {
-  transform-origin: right center;
-  animation: wingFlapLeft 0.35s ease-in-out infinite alternate;
-}
-
-.butterfly-wing.right-wing {
-  transform-origin: left center;
-  transform: scaleX(-1);
-  animation: wingFlapRight 0.35s ease-in-out infinite alternate;
-}
-
-.butterfly-body {
-  width: 4px;
-  height: 22px;
-  background: #3a2503;
-  border-radius: 2px;
-  margin: 0 1px;
-}
-
-@keyframes wingFlapLeft {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(-65deg); }
-}
-
-@keyframes wingFlapRight {
-  0% { transform: scaleX(-1) rotateY(0deg); }
-  100% { transform: scaleX(-1) rotateY(-65deg); }
-}
-
-@keyframes butterflyFloat {
-  0% { transform: translate(0, 0) rotate(5deg); }
-  35% { transform: translate(-12px, -18px) rotate(-8deg); }
-  70% { transform: translate(-6px, 10px) rotate(12deg); }
-  100% { transform: translate(0, 0) rotate(5deg); }
-}
-
-/* Inner Cream Parchment Body (Clear Window for All Text) */
-.card-parchment-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: clamp(650px, 84vh, 810px);
-  background: var(--cream);
-  background-image: url('../assets/decorations/parchment-arch.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  padding: clamp(50px, 7vh, 72px) clamp(28px, 6vw, 48px) clamp(46px, 6.5vh, 66px) clamp(28px, 6vw, 48px);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  z-index: 10;
-  box-shadow: inset 0 0 40px rgba(184, 150, 80, 0.3);
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.parchment-grain {
+.invitation-lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(255, 253, 245, 0.4) 0%, rgba(240, 228, 202, 0.6) 100%);
-  pointer-events: none;
-  border-radius: 8px;
+  background: rgba(2, 20, 15, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-/* Inner Delicate Hairline Filigree Border */
-.card-inner-border {
+.lightbox-dialog-content {
+  position: relative;
+  z-index: 2;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close-btn {
   position: absolute;
-  inset: clamp(14px, 2.5vw, 22px);
-  border: 1.5px solid rgba(212, 175, 55, 0.65);
-  border-radius: 5px;
-  pointer-events: none;
-}
-
-.card-inner-border::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border: 1px solid rgba(6, 78, 59, 0.25);
-  border-radius: 4px;
-}
-
-/* Content Stack Inside Card (Always in Foreground) */
-.card-content-stack {
-  position: relative;
-  z-index: 30;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  gap: clamp(4px, 1vh, 8px);
-}
-
-/* Crown at Top */
-.card-crown-ornament {
-  width: clamp(46px, 7vw, 62px);
-  margin-top: 0;
-  margin-bottom: 2px;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35)) drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
-}
-
-.crown-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Task 8: "Celebrate a New Chapter With Us As" */
-.invitation-opener {
-  font-family: var(--font-serif);
-  font-size: clamp(0.82rem, 1.8vw, 1rem);
-  font-weight: 800;
-  letter-spacing: clamp(0.12em, 0.3vw, 0.2em);
-  text-transform: uppercase;
-  color: #02382E;
-  line-height: 1.4;
-  margin: 0;
-}
-
-/* Task 8: "Jennina" */
-.celebrant-title-group {
-  margin: 2px 0;
-  position: relative;
-  width: 100%;
-}
-
-.celebrant-name {
-  font-family: var(--font-script);
-  font-size: clamp(3.6rem, 9vw, 5.2rem);
-  font-weight: 700;
-  line-height: 1.05;
-  color: #01261F;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 2px 4px rgba(0, 0, 0, 0.15);
-  position: relative;
-  display: inline-block;
-  padding: 0;
-}
-
-/* Task 8: "Turns 18" */
-.milestone-badge-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(8px, 2vw, 14px);
-  margin: 0;
-}
-
-.ribbon-flourish {
-  color: var(--royal-gold);
-  font-size: clamp(1rem, 2.2vw, 1.35rem);
-}
-
-.milestone-word {
-  font-family: var(--font-serif);
-  font-size: clamp(1.08rem, 2.6vw, 1.48rem);
-  font-weight: 800;
-  letter-spacing: 0.25em;
-  color: #02382E;
-}
-
-.milestone-number {
-  font-family: var(--font-script);
-  font-size: clamp(2.4rem, 5.5vw, 3.4rem);
-  font-weight: 800;
-  color: #022B23;
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.4);
-  margin-left: -2px;
-}
-
-/* Task 8: "A Decade and Eight" */
-.subtitle-divider-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 82%;
-  margin: 2px 0 4px 0;
-}
-
-.gold-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--royal-gold) 50%, transparent 100%);
-}
-
-.subtitle-text {
-  font-family: var(--font-serif);
-  font-size: clamp(0.88rem, 1.8vw, 1.05rem);
-  font-style: italic;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: #02382E;
-}
-
-/* Emerald Roses Garland Accent (From PDF Page 1) */
-.emerald-roses-accent {
-  max-width: clamp(150px, 30vw, 210px);
-  margin: 4px auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.22));
-  animation: rosesGentleSway 7s ease-in-out infinite alternate;
-}
-
-.roses-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-@keyframes rosesGentleSway {
-  0% { transform: rotate(-1.5deg) scale(1); }
-  100% { transform: rotate(1.5deg) scale(1.02); }
-}
-
-/* Task 8: Date and Time Section ("February 5, 2027" and "3:00 PM") */
-.event-datetime-badge {
-  width: clamp(250px, 78%, 320px);
-  margin: 4px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.datetime-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  width: 100%;
-  padding: 6px 10px;
-  border-top: 1.5px solid var(--deep-forest-green);
-  border-bottom: 1.5px solid var(--deep-forest-green);
-  position: relative;
-}
-
-.datetime-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.weekday-name {
-  font-family: var(--font-serif);
-  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  color: #02382E;
-}
-
-.col-date-hero {
-  padding: 0 clamp(8px, 1.8vw, 16px);
-  border-left: 1px solid rgba(6, 78, 59, 0.35);
-  border-right: 1px solid rgba(6, 78, 59, 0.35);
-}
-
-.month-name {
-  font-family: var(--font-serif);
-  font-size: clamp(0.72rem, 1.5vw, 0.84rem);
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  color: #02382E;
-}
-
-.date-number {
-  font-family: var(--font-serif);
-  font-size: clamp(1.85rem, 4vw, 2.35rem);
-  font-weight: 800;
+  top: -42px;
+  right: 0;
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 24px;
   line-height: 1;
-  color: #022B23;
-  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.35);
-}
-
-.time-label {
-  font-family: var(--font-serif);
-  font-size: clamp(0.76rem, 1.6vw, 0.88rem);
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  color: #02382E;
-  white-space: nowrap;
-}
-
-.datetime-year-pill {
-  margin-top: 3px;
-}
-
-.year-digits {
-  font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 2.2vw, 1.2rem);
-  font-weight: 800;
-  letter-spacing: 0.25em;
-  color: var(--deep-forest-green);
-}
-
-/* Venue Block (Page 1 PDF Faithful) */
-.venue-location-wrap {
-  margin-top: 4px;
-  margin-bottom: 2px;
-  z-index: 32;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
-.venue-preposition {
-  font-family: var(--font-serif);
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  color: #022B23;
-  font-weight: 800;
+.lightbox-close-btn:hover {
+  background: rgba(212, 175, 55, 0.4);
+  transform: scale(1.1);
+}
+
+.lightbox-enlarged-img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 175, 55, 0.4);
 }
 
 .venue-name {
@@ -1343,56 +1079,11 @@ body.invitation-open .revealed-invitation-scene {
     max-width: 360px;
   }
 
-  .royal-invitation-card {
-    min-height: auto;
-    margin: 24px auto 18px auto;
+  .royal-official-invitation-section {
+    max-width: 100%;
+    margin: 20px auto 24px auto;
   }
 
-  .card-baroque-frame {
-    inset: -6px -8px;
-  }
-
-  .card-floral-swag {
-    width: 94%;
-    max-height: 48px;
-  }
-
-  .card-floral-swag.swag-top {
-    top: -42px;
-  }
-
-  .card-floral-swag.swag-bottom {
-    bottom: -44px;
-  }
-
-  .card-parchment-body {
-    min-height: auto;
-    padding: 44px 18px 40px 18px;
-  }
-
-  .card-content-stack {
-    gap: 4px;
-  }
-
-  .card-crown-ornament {
-    width: 44px;
-    margin-bottom: 0;
-  }
-
-  .celebrant-name {
-    font-size: 3.3rem;
-  }
-
-  .emerald-roses-accent {
-    max-width: 150px;
-    margin: 2px auto;
-  }
-
-  .event-datetime-badge {
-    width: 90%;
-    max-width: 280px;
-    margin: 3px 0;
-  }
 }
 
 /* Very Small Mobile Screens (up to 380px) */
@@ -1409,13 +1100,7 @@ body.invitation-open .revealed-invitation-scene {
     font-size: 2.1rem;
   }
 
-  .card-parchment-body {
-    padding: 26px 12px 24px 12px;
-  }
 
-  .datetime-grid {
-    padding: 6px 4px;
-  }
 }
 
 /* Landscape Mobile Orientation */
@@ -1438,7 +1123,7 @@ body.invitation-open .revealed-invitation-scene {
     display: none;
   }
 
-  .royal-invitation-card {
+  .royal-official-invitation-section {
     margin: 20px 0;
   }
 }

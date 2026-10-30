@@ -189,109 +189,28 @@
         </button>
       </nav>
 
-      <!-- Golden Framed Royal Invitation Card -->
-      <article class="royal-invitation-card" id="invitationCard">
-        
-        <!-- Top Floral Swag (From PDF Page 1) - Outer Arch Garland -->
-        <div class="card-floral-swag swag-top" aria-hidden="true">
-          <img src="assets/decorations/floral-swag.png" alt="" class="floral-swag-img">
-        </div>
-
-        <!-- Bottom Floral Swag (From PDF Page 1) - Outer Base Garland -->
-        <div class="card-floral-swag swag-bottom" aria-hidden="true">
-          <img src="assets/decorations/floral-swag.png" alt="" class="floral-swag-img flip-swag">
-        </div>
-
-        <!-- Authentic Golden Baroque Arch Frame (Page 1 Reference) -->
-        <div class="card-baroque-frame" aria-hidden="true">
-          <img src="assets/decorations/gold-baroque-frame.png" alt="" class="baroque-frame-img">
-        </div>
-
-        <!-- 3D Fluttering Golden Emerald Butterfly -->
-        <div class="card-butterfly" aria-hidden="true">
-          <div class="butterfly-flight">
-            <div class="butterfly-wing left-wing"></div>
-            <div class="butterfly-body"></div>
-            <div class="butterfly-wing right-wing"></div>
+      <!-- =====================================================================
+           OFFICIAL ROYAL INVITATION (From PDF Page 1, Year Corrected to 2027)
+           ===================================================================== -->
+      <section class="royal-official-invitation-section" id="invitationCard" aria-label="Official Debut Invitation Presentation">
+        <div class="official-invitation-container" tabindex="0" role="button" aria-label="Official Debut Invitation for Jennina - Tap to enlarge">
+          <picture>
+            <source srcset="assets/images/jennina-official-invitation.webp" type="image/webp">
+            <img src="assets/images/jennina-official-invitation.png" 
+                 id="officialInvitationImg"
+                 alt="Jennina Turns 18 - Official Debut Invitation - Friday, February 5, 2027 at 3:00 PM at Stalla Suites Events Place (Pandora Hall)" 
+                 class="official-invitation-image"
+                 width="1241"
+                 height="1756"
+                 loading="eager"
+                 decoding="async">
+          </picture>
+          <div class="invitation-tap-hint" aria-hidden="true">
+            <span class="tap-hint-icon">🔍</span>
+            <span class="tap-hint-text">Tap to enlarge invitation</span>
           </div>
         </div>
-
-        <!-- Inner Parchment Card Surface (Contains All Readable Content) -->
-        <div class="card-parchment-body">
-          <div class="parchment-grain" aria-hidden="true"></div>
-          
-          <!-- Inner Gold Filigree Hairline Border -->
-          <div class="card-inner-border" aria-hidden="true">
-            <div class="filigree-corner tl"></div>
-            <div class="filigree-corner tr"></div>
-            <div class="filigree-corner bl"></div>
-            <div class="filigree-corner br"></div>
-          </div>
-
-          <!-- Main Typography & Invitation Details (Always On Top) -->
-          <div class="card-content-stack">
-            
-            <!-- Royal Crown Crest (From PDF Page 2) -->
-            <div class="card-crown-ornament" aria-hidden="true">
-              <img src="assets/decorations/royal-crown.png" alt="" class="crown-img">
-            </div>
-
-            <!-- Task 8: "Celebrate a New Chapter With Us As" -->
-            <p class="invitation-opener">Celebrate a New Chapter With Us As</p>
-
-            <!-- Task 8: "Jennina" -->
-            <div class="celebrant-title-group">
-              <h2 class="celebrant-name" data-celebrant="Jennina">Jennina</h2>
-            </div>
-
-            <!-- Task 8: "Turns 18" -->
-            <div class="milestone-badge-wrap">
-              <span class="ribbon-flourish left" aria-hidden="true">❧</span>
-              <span class="milestone-word">TURNS</span>
-              <span class="milestone-number">18</span>
-              <span class="ribbon-flourish right" aria-hidden="true">❧</span>
-            </div>
-
-            <!-- Task 8: "A Decade and Eight" -->
-            <div class="subtitle-divider-wrap">
-              <span class="gold-line left" aria-hidden="true"></span>
-              <p class="subtitle-text">A Decade and Eight</p>
-              <span class="gold-line right" aria-hidden="true"></span>
-            </div>
-
-
-            <!-- Task 8: Date and Time ("February 5, 2027" & "3:00 PM") -->
-            <div class="event-datetime-badge" aria-label="Date: February 5, 2027 at 3:00 PM">
-              <div class="datetime-grid">
-                <div class="datetime-col col-weekday">
-                  <span class="weekday-name">FRIDAY</span>
-                </div>
-                <div class="datetime-col col-date-hero">
-                  <span class="month-name">FEB</span>
-                  <span class="date-number">5</span>
-                </div>
-                <div class="datetime-col col-time">
-                  <span class="time-label">AT 3:00 PM</span>
-                </div>
-              </div>
-              <div class="datetime-year-pill">
-                <span class="year-digits">2027</span>
-              </div>
-              <p class="sr-only">Celebration date: Friday, February 5, 2027 at 3:00 PM</p>
-            </div>
-
-            <!-- Venue Details (From PDF Page 1) -->
-            <footer class="venue-location-wrap">
-              <span class="venue-preposition">AT</span>
-              <p class="venue-name">STALLA SUITES EVENTS PLACE</p>
-              <p class="venue-hall">(PANDORA HALL)</p>
-            </footer>
-
-          </div>
-
-        </div>
-
-      </article>
+      </section>
 
       <!-- ==============================================
            PHASE 2: SECTION 1 TO 4
@@ -1224,7 +1143,15 @@
 
     </section>
 
-  </main>
+        <!-- Lightbox Modal for Fullscreen Official Invitation Inspection -->
+      <div class="invitation-lightbox-modal" id="invitationLightbox" role="dialog" aria-modal="true" aria-label="Enlarged Official Invitation" hidden>
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <div class="lightbox-dialog-content">
+          <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close enlarged view">&times;</button>
+          <img src="assets/images/jennina-official-invitation.png" alt="Enlarged Official Debut Invitation" class="lightbox-enlarged-img">
+        </div>
+      </div>
+    </main>
 
   <!-- Core JavaScript -->
   <script src="js/main.js"></script>
