@@ -1645,10 +1645,15 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .save-date-content {
-  padding: clamp(90px, 13vh, 120px) clamp(28px, 6vw, 44px) clamp(85px, 12vh, 110px) clamp(28px, 6vw, 44px);
+  position: relative;
+  z-index: 10;
+  padding: clamp(48px, 7vh, 64px) clamp(24px, 5.5vw, 38px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .save-date-title {
@@ -1730,12 +1735,17 @@ body.invitation-open .revealed-invitation-scene {
 
 .section-lead-text {
   font-family: var(--font-serif);
-  font-size: clamp(0.78rem, 1.8vw, 0.95rem);
+  font-size: clamp(0.82rem, 1.8vw, 0.95rem);
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--deep-forest-green);
-  margin-bottom: 12px;
+  color: #02382E;
+  margin: 0 auto 12px auto;
+  max-width: 290px;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .save-date-hero-block {
@@ -3748,6 +3758,10 @@ body.invitation-open .revealed-invitation-scene {
   margin: 0 auto;
 }
 
+.rsvp-card::before {
+  display: none;
+}
+
 .rsvp-arch-img {
   width: 100%;
   height: 100%;
@@ -3786,24 +3800,31 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .rsvp-title {
-  font-family: var(--font-serif-title);
-  font-size: clamp(1.85rem, 4vw, 2.45rem);
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-family: var(--font-heading-decorative), 'Cinzel', serif;
+  font-size: clamp(2.1rem, 4.8vw, 2.7rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #01261F;
+  color: #0A0A0A !important;
+  -webkit-text-fill-color: #0A0A0A !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  filter: none !important;
   margin-bottom: 4px;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85);
 }
 
 .rsvp-subtitle {
-  font-family: var(--font-serif);
-  font-size: clamp(0.76rem, 1.5vw, 0.88rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(0.88rem, 1.7vw, 1.02rem);
   font-style: italic;
-  letter-spacing: 0.1em;
-  color: #02382E;
+  letter-spacing: 0.08em;
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
   font-weight: 700;
   opacity: 1;
   margin-bottom: 6px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
 .rsvp-divider-ornament {
@@ -3821,14 +3842,21 @@ body.invitation-open .revealed-invitation-scene {
 
 /* Authentic Invitation Message */
 .rsvp-main-message {
-  font-family: var(--font-serif);
-  font-size: clamp(0.96rem, 1.6vw, 1.08rem);
-  color: #02382E;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(0.96rem, 1.7vw, 1.1rem);
+  color: #0A0A0A !important;
+  -webkit-text-fill-color: #0A0A0A !important;
   font-weight: 700;
-  line-height: 1.7;
-  letter-spacing: 0.015em;
-  max-width: 330px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  max-width: 345px;
   margin: 0 auto;
+  background: rgba(255, 253, 245, 0.95);
+  border: 1.5px solid rgba(212, 175, 55, 0.55);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09), inset 0 0 12px rgba(212, 175, 55, 0.1);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 /* Deadline Badge */
@@ -3839,13 +3867,15 @@ body.invitation-open .revealed-invitation-scene {
   background: rgba(255, 253, 245, 0.98);
   border: 1.5px solid var(--royal-gold);
   border-radius: 20px;
-  padding: 7px 18px;
+  padding: 8px 18px;
   font-family: var(--font-serif);
-  font-size: clamp(0.82rem, 1.3vw, 0.92rem);
+  font-size: clamp(0.84rem, 1.4vw, 0.95rem);
   font-weight: 800;
-  color: #01261F;
+  color: #0A0A0A !important;
+  -webkit-text-fill-color: #0A0A0A !important;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .deadline-icon {
@@ -4035,7 +4065,8 @@ body.invitation-open .revealed-invitation-scene {
 }
 
 .rsvp-status-note.status-active {
-  color: #01261F;
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
   font-weight: 700;
 }
 
@@ -4071,4 +4102,56 @@ body.invitation-open .revealed-invitation-scene {
   .btn-royal-rsvp:hover {
     transform: none !important;
   }
+}
+
+/* --------------------------------------------------------------------------
+   ROYAL GOLDEN FILIGREE CORNER BORDER (USER CANVA TEMPLATE SPECIFICATION)
+   -------------------------------------------------------------------------- */
+.card-filigree-border {
+  position: absolute;
+  inset: 10px;
+  pointer-events: none;
+  z-index: 2;
+  border: 1.5px solid rgba(212, 175, 55, 0.8);
+  box-shadow: 
+    inset 0 0 0 1.5px rgba(2, 56, 46, 0.45),
+    inset 0 0 16px rgba(212, 175, 55, 0.15);
+  border-radius: 14px;
+}
+
+.corner-filigree {
+  position: absolute;
+  width: clamp(72px, 14vw, 110px);
+  height: clamp(54px, 10.5vw, 84px);
+  background-image: url('../assets/decorations/gold-corner-filigree.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 1px 2px rgba(2, 56, 46, 0.55)) drop-shadow(0 0 1px rgba(212, 175, 55, 0.85));
+}
+
+.corner-filigree.top-left {
+  top: -2px;
+  left: -2px;
+  background-position: top left;
+}
+
+.corner-filigree.top-right {
+  top: -2px;
+  right: -2px;
+  background-position: top left;
+  transform: scaleX(-1);
+}
+
+.corner-filigree.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  background-position: top left;
+  transform: scaleY(-1);
+}
+
+.corner-filigree.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  background-position: top left;
+  transform: scale(-1, -1);
 }

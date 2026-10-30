@@ -167,10 +167,11 @@ with sync_playwright() as p:
     women_outfits = page.locator("#galleryGuests .attire-photo-card")
     assert women_outfits.count() == 6, f"Expected 6 women's outfits, got {women_outfits.count()}"
     page.locator("#galleryGuests").scroll_into_view_if_needed()
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(1000)
+    page.evaluate("() => Promise.all(Array.from(document.querySelectorAll('#galleryGuests img')).map(img => img.decode ? img.decode().catch(() => {}) : Promise.resolve()))")
     for i in range(6):
       page.locator(f"#galleryGuests .attire-photo-card:nth-child({i+1})").scroll_into_view_if_needed()
-      page.wait_for_timeout(100)
+      page.wait_for_timeout(300)
       img_loaded = page.evaluate(f"() => document.querySelectorAll('#galleryGuests img')[{i}].complete && document.querySelectorAll('#galleryGuests img')[{i}].naturalWidth > 0")
       assert img_loaded, f"Women's outfit image {i+1} failed to load"
     print("  [PASS] 6 Women's royal framed gowns verified and loaded")
